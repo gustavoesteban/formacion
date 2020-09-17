@@ -9,7 +9,7 @@
 - Conectividad
 - Observabilidad
 
-[GitHub](https://github.com/gustavoesteban/curso_istio)
+[GitHub](https://github.com/gustavoesteban/formacion/tree/master/cursos/istio)
 [Plataforma](https://kirin.uno)
 [Empezar](#Presentación)
 

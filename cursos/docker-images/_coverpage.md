@@ -11,7 +11,7 @@
 - ENTRYPOINT
 - ...
 
-[GitHub](https://github.com/gustavoesteban/curso_docker-images)
+[GitHub](https://github.com/gustavoesteban/formacion/tree/master/cursos/docker-images)
 [Plataforma](https://kirin.uno)
 [Empezar](#Introducción)
 
