@@ -23,4 +23,3 @@ WORKDIR /usr/local/docsify
 ENTRYPOINT [ "docsify", "serve", "--port", "3000" ]
 
 CMD [ "." ]
-

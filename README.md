@@ -50,4 +50,10 @@ docker run -d \
 docker compose up -d
 ```
 
+# For mode local dev
+
+```bash
+bash dev.sh
+```
+
 # Enjoy ^_^
