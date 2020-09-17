@@ -1,0 +1,87 @@
+version: '3'
+
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - certs:/etc/nginx/certs:ro
+      - vhostd:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+    labels:
+      - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
+
+  letsencrypt:
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    restart: always
+    environment:
+      - NGINX_PROXY_CONTAINER=nginx-proxy
+    volumes:
+      - certs:/etc/nginx/certs:rw
+      - vhostd:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+  launcher:
+    image: nginx
+    container_name: launcher
+    restart: always
+    expose:
+      - "80"
+    volumes:
+      - ./launcher:/usr/share/nginx/html:ro
+    environment:
+      - VIRTUAL_HOST=kirin.uno,www.kirin.uno
+      - LETSENCRYPT_HOST=kirin.uno
+      - LETSENCRYPT_EMAIL=dfsdagfada@sss.es
+
+  curso-istio:
+    image: curso:base
+    build:
+      context: .
+    container_name: curso-istio
+    restart: always
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./cursos/istio:/usr/local/docsify
+    environment:
+      - VIRTUAL_HOST=istio.kirin.uno,www.istio.kirin.uno
+      - LETSENCRYPT_HOST=istio.kirin.uno
+      - LETSENCRYPT_EMAIL=gustavo.esteban@prefapp.es
+
+  curso-docker:
+    image: curso:base
+    container_name: curso-docker
+    restart: always
+    ports:
+      - "3002:3000"
+    volumes:
+      - ./cursos/docker:/usr/local/docsify
+    environment:
+      - VIRTUAL_HOST=docker.kirin.uno,www.docker.kirin.uno
+      - LETSENCRYPT_HOST=docker.kirin.uno
+      - LETSENCRYPT_EMAIL=gustavo.esteban@prefapp.es
+ 
+  curso-docker-images:
+    image: curso:base
+    container_name: curso-docker-images
+    restart: always
+    ports:
+      - "3003:3000"
+    volumes:
+      - ./cursos/docker-images:/usr/local/docsify
+    environment:
+      - VIRTUAL_HOST=dockerimages.kirin.uno,www.dockerimages.kirin.uno
+      - LETSENCRYPT_HOST=dockerimages.kirin.uno
+      - LETSENCRYPT_EMAIL=gustavo.esteban@prefapp.es
+
+volumes: 
+  certs:
+  html:
+  vhostd:
+
