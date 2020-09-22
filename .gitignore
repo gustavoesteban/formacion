@@ -2,4 +2,5 @@
 *.swo
 .env
 ansible/vars.yml
+ansible/host.yml
 
