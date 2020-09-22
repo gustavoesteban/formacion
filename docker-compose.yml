@@ -51,7 +51,7 @@ services:
       - ./cursos/${COURSE_1_NAME}:/usr/local/docsify
     environment:
       - VIRTUAL_HOST=${COURSE_1_NAME}.${DOMAIN},www.${COURSE_1_NAME}.${DOMAIN}
-      - LETSENCRYPT_HOST=${COURSE_1_NAME}.${DOMAIN},www.${COURSE_1_NAME}.${DOMAIN}
+      - LETSENCRYPT_HOST=${COURSE_1_NAME}.${DOMAIN}
       - LETSENCRYPT_EMAIL=${EMAIL}
 
   curso-2:
@@ -64,7 +64,7 @@ services:
       - ./cursos/docker:/usr/local/docsify
     environment:
       - VIRTUAL_HOST=${COURSE_2_NAME}.${DOMAIN},www.${COURSE_2_NAME}.${DOMAIN}
-      - LETSENCRYPT_HOST=${COURSE_2_NAME}.${DOMAIN},www.${COURSE_2_NAME}.${DOMAIN}
+      - LETSENCRYPT_HOST=${COURSE_2_NAME}.${DOMAIN}
       - LETSENCRYPT_EMAIL=${EMAIL}
  
   curso-3:
@@ -77,7 +77,7 @@ services:
       - ./cursos/${COURSE_3_NAME}:/usr/local/docsify
     environment:
       - VIRTUAL_HOST=${COURSE_3_NAME}.${DOMAIN},www.${COURSE_3_NAME}.${DOMAIN}
-      - LETSENCRYPT_HOST=${COURSE_3_NAME}.${DOMAIN},www.${COURSE_3_NAME}.${DOMAIN}
+      - LETSENCRYPT_HOST=${COURSE_3_NAME}.${DOMAIN}
       - LETSENCRYPT_EMAIL=${EMAIL}
 
 volumes: 
