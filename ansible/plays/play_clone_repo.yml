@@ -1,0 +1,9 @@
+---
+
+- hosts: web
+  name: Clone repo
+  tasks:
+    - include_vars: ../vars.yml
+    - include_tasks: ../tasks/task_clone_repo.yml
+
+...

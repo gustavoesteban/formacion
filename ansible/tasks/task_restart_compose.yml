@@ -1,0 +1,8 @@
+---
+
+- name: Run compose
+  command: docker-compose restart
+  args:
+    chdir: ~/{{ repo_name }}
+
+...

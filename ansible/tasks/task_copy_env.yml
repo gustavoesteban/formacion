@@ -1,0 +1,8 @@
+---
+
+- name: Copy .env compose
+  copy:
+    src: ../../.env
+    dest: ~/{{ repo_name }}
+
+...

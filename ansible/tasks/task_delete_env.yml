@@ -1,0 +1,8 @@
+---
+
+- name: Delete .env
+  command: rm .env
+  args:
+    chdir: ~/{{ repo_name }}
+
+...

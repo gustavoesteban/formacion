@@ -1,0 +1,12 @@
+---
+
+- hosts: web
+  name: Install resources
+  tasks:
+    - include_vars: ../vars.yml
+    - include_tasks: ../tasks/task_apt-update.yml
+    - include_tasks: ../tasks/task_install_git.yml
+    - include_tasks: ../tasks/task_install_docker.yml
+    - include_tasks: ../tasks/task_install_docker-compose.yml
+
+...

@@ -1,0 +1,9 @@
+---
+
+- hosts: web
+  name: Manipulate ev
+  tasks:
+    - include_vars: ../vars.yml
+    - include_tasks: ../tasks/task_copy_env.yml
+
+...

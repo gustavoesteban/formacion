@@ -1,0 +1,8 @@
+---
+
+    - import_playbook: ./plays/play_install_resources.yml
+    - import_playbook: ./plays/play_clone_repo.yml
+    - import_playbook: ./plays/play_env.yml
+    - import_playbook: ./plays/play_run_compose.yml
+
+...

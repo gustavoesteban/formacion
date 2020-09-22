@@ -1,0 +1,10 @@
+---
+
+- hosts: web
+  name: Run compose
+  tasks:
+    - include_vars: ../vars.yml
+    - include_tasks: ../tasks/task_run_compose.yml
+    - include_tasks: ../tasks/task_delete_env.yml
+
+...
