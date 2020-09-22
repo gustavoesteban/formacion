@@ -4,5 +4,7 @@
   git:
     repo: 'https://{{ token }}@github.com/{{ user }}/{{ repo_name }}.git'
     dest: ~/{{ repo_name }}
+    clone: yes
+    update: yes
 
 ...
