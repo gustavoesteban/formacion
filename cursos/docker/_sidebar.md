@@ -39,3 +39,7 @@
   - [O Docker-Compose: fundamentos](./04_aplicacions_e_servizos_multicontedor/06_o_docker-compose_fundamentos.md)
   - [Ciclo de vida dunha aplicación de compose](./04_aplicacions_e_servizos_multicontedor/07_cilo_de_vida_dunha_aplicacion_de_compose.md)
   - [Práctica guiada: Nesquik vs ColaCao](./04_aplicacions_e_servizos_multicontedor/08_practica_guiada_nesquik_vs_colacao.md)
+
+- Actividades
+  - [Módulo 1](./05_actividades/01_modulo_1.md)
+  - [Módulo 2](./05_actividades/02_modulo_2.md)

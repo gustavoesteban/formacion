@@ -9,9 +9,9 @@ services:
       - "443:443"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
-      - certs:/etc/nginx/certs:ro
-      - vhostd:/etc/nginx/vhost.d
-      - html:/usr/share/nginx/html
+      - ${VOL_CERTS}:/etc/nginx/certs:ro
+      - ${VOL_VHOSTD}:/etc/nginx/vhost.d
+      - ${VOL_HTML}:/usr/share/nginx/html
     labels:
       - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
 
@@ -21,10 +21,10 @@ services:
     environment:
       - NGINX_PROXY_CONTAINER=nginx-proxy
     volumes:
-      - certs:/etc/nginx/certs:rw
-      - vhostd:/etc/nginx/vhost.d
-      - html:/usr/share/nginx/html
       - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ${VOL_CERTS}:/etc/nginx/certs:rw
+      - ${VOL_VHOSTD}:/etc/nginx/vhost.d
+      - ${VOL_HTML}:/usr/share/nginx/html
 
   launcher:
     image: nginx
@@ -35,53 +35,52 @@ services:
     volumes:
       - ./launcher:/usr/share/nginx/html:ro
     environment:
-      - VIRTUAL_HOST=kirin.uno,www.kirin.uno
-      - LETSENCRYPT_HOST=kirin.uno
-      - LETSENCRYPT_EMAIL=dfsdagfada@sss.es
+      - VIRTUAL_HOST=${DOMAIN},www.${DOMAIN}
+      - LETSENCRYPT_HOST=${DOMAIN}
+      - LETSENCRYPT_EMAIL=${EMAIL}
 
-  curso-istio:
+  curso-${COURSE_1_NAME}:
     image: curso:base
     build:
       context: .
-    container_name: curso-istio
+    container_name: curso-${COURSE_1_NAME}
     restart: always
     ports:
-      - "3001:3000"
+      - "${COURSE_1_PORT}:3000"
     volumes:
-      - ./cursos/istio:/usr/local/docsify
+      - ./cursos/${COURSE_1_NAME}:/usr/local/docsify
     environment:
-      - VIRTUAL_HOST=istio.kirin.uno,www.istio.kirin.uno
-      - LETSENCRYPT_HOST=istio.kirin.uno
-      - LETSENCRYPT_EMAIL=gustavo.esteban@prefapp.es
+      - VIRTUAL_HOST=${COURSE_1_NAME}.${DOMAIN},www.${COURSE_1_NAME}.${DOMAIN}
+      - LETSENCRYPT_HOST=${COURSE_1_NAME}.${DOMAIN},www.${COURSE_1_NAME}.${DOMAIN}
+      - LETSENCRYPT_EMAIL=${EMAIL}
 
-  curso-docker:
+  curso-${COURSE_2_NAME}:
     image: curso:base
-    container_name: curso-docker
+    container_name: curso-${COURSE_2_NAME}
     restart: always
     ports:
-      - "3002:3000"
+      - "${COURSE_2_PORT}:3000"
     volumes:
       - ./cursos/docker:/usr/local/docsify
     environment:
-      - VIRTUAL_HOST=docker.kirin.uno,www.docker.kirin.uno
-      - LETSENCRYPT_HOST=docker.kirin.uno
-      - LETSENCRYPT_EMAIL=gustavo.esteban@prefapp.es
+      - VIRTUAL_HOST=${COURSE_2_NAME}.${DOMAIN},www.${COURSE_2_NAME}.${DOMAIN}
+      - LETSENCRYPT_HOST=${COURSE_2_NAME}.${DOMAIN},www.${COURSE_2_NAME}.${DOMAIN}
+      - LETSENCRYPT_EMAIL=${EMAIL}
  
-  curso-docker-images:
+  curso-${COURSE_3_NAME}:
     image: curso:base
-    container_name: curso-docker-images
+    container_name: curso-${COURSE_3_NAME}
     restart: always
     ports:
       - "3003:3000"
     volumes:
-      - ./cursos/docker-images:/usr/local/docsify
+      - ./cursos/${COURSE_3_NAME}:/usr/local/docsify
     environment:
-      - VIRTUAL_HOST=dockerimages.kirin.uno,www.dockerimages.kirin.uno
-      - LETSENCRYPT_HOST=dockerimages.kirin.uno
-      - LETSENCRYPT_EMAIL=gustavo.esteban@prefapp.es
+      - VIRTUAL_HOST=${COURSE_3_NAME}.${DOMAIN},www.${COURSE_3_NAME}.${DOMAIN}
+      - LETSENCRYPT_HOST=${COURSE_3_NAME}.${DOMAIN},www.${COURSE_3_NAME}.${DOMAIN}
+      - LETSENCRYPT_EMAIL=${EMAIL}
 
 volumes: 
   certs:
   html:
   vhostd:
-
