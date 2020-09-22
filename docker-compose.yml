@@ -39,7 +39,7 @@ services:
       - LETSENCRYPT_HOST=${DOMAIN}
       - LETSENCRYPT_EMAIL=${EMAIL}
 
-  curso-${COURSE_1_NAME}:
+  curso-1:
     image: curso:base
     build:
       context: .
@@ -54,7 +54,7 @@ services:
       - LETSENCRYPT_HOST=${COURSE_1_NAME}.${DOMAIN},www.${COURSE_1_NAME}.${DOMAIN}
       - LETSENCRYPT_EMAIL=${EMAIL}
 
-  curso-${COURSE_2_NAME}:
+  curso-2:
     image: curso:base
     container_name: curso-${COURSE_2_NAME}
     restart: always
@@ -67,7 +67,7 @@ services:
       - LETSENCRYPT_HOST=${COURSE_2_NAME}.${DOMAIN},www.${COURSE_2_NAME}.${DOMAIN}
       - LETSENCRYPT_EMAIL=${EMAIL}
  
-  curso-${COURSE_3_NAME}:
+  curso-3:
     image: curso:base
     container_name: curso-${COURSE_3_NAME}
     restart: always
