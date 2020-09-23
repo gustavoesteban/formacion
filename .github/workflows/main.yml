@@ -1,5 +1,20 @@
--name: Play Ansible Playbook
-  uses: arillso/action.playbook@master
-  with:
-    playbook: ansible/playbook_repo_pull.yml
-    inventory: ansible/hosts.yml
+name: Play Ansible Playbook
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  pull-repo:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: arillso/action.playbook@master
+      with:
+        playbook: playbook_repo_pull.yml
+        directory: ../ansible
+        key: ${{secrets.SSH_PRIVATE_KEY}}
+        inventory: |
+          [web]
+          178.128.186.207
