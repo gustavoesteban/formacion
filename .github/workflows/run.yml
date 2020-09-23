@@ -1,14 +1,15 @@
 on: push
-name: Play Ansible Playbook
+name: Pull repo
 jobs:
   pull-repo:
     runs-on: ubuntu-latest
     steps:
-    - uses: arillso/action.playbook@master
+    - name: Run a command remotely
+      uses: docker://evaneos/ssh-action:0.1.0
       with:
-        playbook: playbook_repo_pull.yml
-        directory: ../../ansible
-        key: ${{secrets.SSH_PRIVATE_KEY}}
-        inventory: |
-          [web]
-          178.128.186.207
+        hosts: ${{ secrets.PULL_REPO_HOST }}
+        user: ${{ secrets.PULL_REPO_USER }}
+        private_key: ${{ secrets.PULL_REPO_PRIVATE_KEY }}
+        commands: |
+          cd ~/formacion
+          git pull
