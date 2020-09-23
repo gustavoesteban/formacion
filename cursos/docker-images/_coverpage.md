@@ -2,7 +2,7 @@
 
 # Docker <small>images</small>
 
-> Docker images are the basis of containers
+> Images are the basis of containers
 
 - RUN
 - FROM
