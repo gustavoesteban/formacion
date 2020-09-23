@@ -7,7 +7,7 @@
 - Control
 - Seguridad
 - Conectividad
-- Observabilidadddddd
+- Observabilidadededd
 
 [GitHub](https://github.com/gustavoesteban/formacion/tree/master/cursos/istio)
 [Plataforma](https://kame.pro)
