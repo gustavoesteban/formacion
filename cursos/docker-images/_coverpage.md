@@ -4,7 +4,6 @@
 
 > Are the basis of containers
 
-- RUN
 - FROM
 - EXPOSE
 - ENTRYPOINT
