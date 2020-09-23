@@ -10,7 +10,7 @@
 - Observabilidad
 
 [GitHub](https://github.com/gustavoesteban/formacion/tree/master/cursos/istio)
-[Plataforma](https://kirin.uno)
+[Plataforma](https://kame.pro)
 [Empezar](#Presentación)
 
 ![color](#BFD1E5)

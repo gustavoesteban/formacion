@@ -1,0 +1,5 @@
+---
+
+    - import_playbook: ./plays/play_clone_repo.yml
+
+...

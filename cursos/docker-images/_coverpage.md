@@ -12,7 +12,7 @@
 - **...**
 
 [GitHub](https://github.com/gustavoesteban/formacion/tree/master/cursos/docker-images)
-[Plataforma](https://kirin.uno)
+[Plataforma](https://kame.pro)
 [Empezar](#Introducción)
 
 <!--- GB color --->
