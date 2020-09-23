@@ -11,5 +11,6 @@ jobs:
         user: ${{ secrets.PULL_REPO_USER }}
         private_key: ${{ secrets.PULL_REPO_PRIVATE_KEY }}
         commands: |
+          echo "Hola amigo"
           cd ~/formacion
           git pull
