@@ -5,7 +5,6 @@
 > Docker images are the basis of containers
 
 - RUN
-- COPY
 - FROM
 - EXPOSE
 - ENTRYPOINT
