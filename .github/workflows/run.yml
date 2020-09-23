@@ -7,7 +7,7 @@ jobs:
     - uses: arillso/action.playbook@master
       with:
         playbook: playbook_repo_pull.yml
-        directory: ../ansible
+        directory: ../../ansible
         key: ${{secrets.SSH_PRIVATE_KEY}}
         inventory: |
           [web]
