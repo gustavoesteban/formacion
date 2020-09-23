@@ -39,7 +39,7 @@ docker run -d \
   - Replace the image in [**_media/icon.png**]
   - Link the repo
   - Link "Empezar" to the first header "**#**" in the README.md
-  - [Plataforma](https://domain.com)
+  - Change principla domain (launcher) (Plataforma(https://domain.com))
   - Select background color
 
 - Sidebar [**_sidebar.md**]
