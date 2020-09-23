@@ -12,7 +12,7 @@ Para este exemplo, imos elixir unha [Debian Jessie](https://www.debian.org/relea
 
 A nosa imaxe tería esta estrutura: 
 
-![Network](./../_media/03_xestion_de_imaxes_e_contedores/capa_1.png)
+![Capa](./../_media/03_xestion_de_imaxes_e_contedores/capa_1.png)
 
 ## 2ª Capa: As dependencias do Apache2
 
@@ -20,7 +20,7 @@ Neste exemplo, a versión de Apache a montar é a [2.2](https://httpd.apache.org
 
 Estas dependencias, constituirían unha segunda capa na nosa imaxe: 
 
-![Network](./../_media/03_xestion_de_imaxes_e_contedores/capa_2.png)
+![Capa](./../_media/03_xestion_de_imaxes_e_contedores/capa_2.png)
 
 ## 3ª Capa: O servidor Apache
 
@@ -28,8 +28,8 @@ Por último, imos agregar a capa co noso servidor web.
 
 A imaxe, por fin, quedaría da seguinte forma:
 
-![Network](./../_media/03_xestion_de_imaxes_e_contedores/capa_3.png)
+![Capa](./../_media/03_xestion_de_imaxes_e_contedores/capa_3.png)
 
 E listo! Agora xa podemos empregar a imaxe para lanzar containers con **versións específicas** de software e cunha base **Debian** sen preocuparnos do resto de software que poida estar a correr no anfitrión. 
 
-![Network](./../_media/02_docker/../03_xestion_de_imaxes_e_contedores/capa_total.png)
+![Capas](./../_media/02_docker/../03_xestion_de_imaxes_e_contedores/capa_total.png)

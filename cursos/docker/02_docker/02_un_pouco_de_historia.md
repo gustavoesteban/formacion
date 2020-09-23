@@ -4,7 +4,7 @@ Vamos a revisar unha serie de ferramentas e tecnoloxías que xurdiron ao longo d
 
 ## **Xaulas chroot (1979)**
 
-![Network](./../_media/02_docker/chroot.png)
+![chroot](./../_media/02_docker/chroot.png)
 
 No desenrolo do sistema Unix V7, agregouse unha nova chamada de sistema (chroot) que permitía cambiar o directorio raíz dun proceso, e os seus descendentes, a unha nova localización do sistema de ficheiros.
 
@@ -44,8 +44,8 @@ for i in {lib,lib64}; do sudo umount chroot/$i ; done
 
 ## **FreeBSD Jails (2000), Solaris Zones (2004)**
 
-![Network](./../_media/02_docker/evil_jail.png)
-![Network](./../_media/02_docker/solaris.png)
+![Evil Jail](./../_media/02_docker/evil_jail.png)
+![Solaris](./../_media/02_docker/solaris.png)
 
 Duas décadas despois, un proveedor de hosting sacou un servizo sobre xaulas BSD para lograr unha separación de recursos clara entre os seus servizos e os dos seus clientes, e deste xeito mellorar a seguridade e facilitar a administración dos mesmos.
 
@@ -55,7 +55,7 @@ Oracle agregou unha característica similar a Solaris, que combina o control de 
 
 ## **OpenVZ (2005)**
 
-![Network](./../_media/02_docker/opevz.png)
+![OpenVZ](./../_media/02_docker/opevz.png)
 
 Un ano máis tarde, a compañía Virtuozzo creou un novo sistema de virtualización basado en contedores, sobre o kernel de Linux, que permitía crear multiples contedores illados e seguros, nunha mesma máquina, como se dun servidor privado virtual se tratara.
 
@@ -63,8 +63,8 @@ O código de OpenVZ, aínda que está aberto, nunca formou parte da distribució
 
 ## **linuxcontainers (2008) e Docker (2013)**
 
-![Network](./../_media/02_docker/linuxcontainers.png)
-![Network](./../_media/02_docker/docker_logo.png)
+![LinuxContanirs](./../_media/02_docker/linuxcontainers.png)
+![Docker](./../_media/02_docker/docker_logo.png)
 
 A primeira ferramenta de contedores de software que encontrou ampla acollida dentro da comunidade de Linux foi [LXC](https://linuxcontainers.org/), principalmente polas tecnoloxías que aglutinaba e que foron introducidas dentro do kernel de linux (**Namespaces e cgroups**).
 

@@ -10,10 +10,10 @@ Os recursos poden ter:
 
 É tarefa do kernel impedir que se monopolice o uso dos mesmos, que se produzan accesos indebidos ou que se simultanee o uso de recursos de utilización exclusiva.
 
-![Network](./../_media/01_que_e_un_contedor_de_software/container_1.png)
+![Container](./../_media/01_que_e_un_contedor_de_software/container_1.png)
 
 Ademais, o kernel leva a cabo unha importante labor de homoxeneización, ocultando os detalles do funcionamento dos diferentes dispositivos e ofrecendo aos procesos interfaces limpas e unificadas que, estandarizan o emprego de hardware de distinta procedencia.
 
 > Podemos concluir, por tanto, que os procesos non “ven” **os dispositivos que conforman a máquina onde corren, senón a representación que dos mesmos lles ofrece o kernel**.
 
-![Network](./../_media/01_que_e_un_contedor_de_software/container_2.png)
+![Container](./../_media/01_que_e_un_contedor_de_software/container_2.png)

@@ -4,7 +4,7 @@ Os contedores de software consisten nunha técnica de virtualización a nivel de
 
 A idea é sinxela, dado que o SO é, dende o punto de vista do proceso, un conxunto de recursos, podemos ofrecerlle unha vista "privada" ou virtual desos recursos. 
 
-![Network](./../_media/01_que_e_un_contedor_de_software/container_7.png)
+![Container](./../_media/01_que_e_un_contedor_de_software/container_7.png)
 
 A virtualización desos recursos globais de tal forma que, desde o punto de vista do proceso, sexan privados para él, **é no que consiste un contedor**.
 
@@ -21,7 +21,7 @@ A costa de:
 
 Ademais, non é alternativa a técnica de virtualización de plataforma: ao contrario, é **totalmente compatible**. Precisamente, é como se está a empregar en moitos sitios:
 
-![Network](./../_media/01_que_e_un_contedor_de_software/container_8.png)
+![Container](./../_media/01_que_e_un_contedor_de_software/container_8.png)
 
 Kerrisk Michael, "Namespaces in operation, part 1: namespaces overview" [en liña](https://lwn.net/Articles/531114/) [Consulta: 06-Xaneiro-2019]
 * O primeiro de 9 artigos a consultar para explorar en profundidade os namespaces en Linux e a súa condición de elemento fundamental para os contedores. 

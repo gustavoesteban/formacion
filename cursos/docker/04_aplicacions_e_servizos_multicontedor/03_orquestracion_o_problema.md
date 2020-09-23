@@ -30,11 +30,11 @@ Vale, agora temos claro que hai que romper todo en unidades pequenas que se comu
 
 Imos comenzar conha simple aplicación en Php dentro dun container:
 
-![Network](./../_media/04_aplicacions_e_servizos_multicontedor/container_standalonoe.png)
+![Container](./../_media/04_aplicacions_e_servizos_multicontedor/container_standalonoe.png)
 
 A nosa aplicación quere ter **estado**. A solución obvia é agregar unha base de datos dentro do container:
 
-![Network](./../_media/04_aplicacions_e_servizos_multicontedor/mega_container.png)
+![Container](./../_media/04_aplicacions_e_servizos_multicontedor/mega_container.png)
 
 Isto, a pesar de qué sería unha solución obvia, é un horror e unha ruptura do paradigma da containerización:
 
@@ -46,17 +46,17 @@ O problema sería peor se queremos, por exemplo, engadir soporte para SSL, un se
 
 A solución axeitada sería esta:
 
-![Network](./../_media/04_aplicacions_e_servizos_multicontedor/container_bbdd.png)
+![Container](./../_media/04_aplicacions_e_servizos_multicontedor/container_bbdd.png)
 
 Agora temos dúas unidades independentes en dous containers. Podemos modificar unha sen afecta-la outra. As preocupacións están correctamente separadas. 
 
 Neste momento, os nosos containers poden ademáis **escalar**, basta con engadir novos containers de aplicación se é necesario:
 
-![Network](./../_media/04_aplicacions_e_servizos_multicontedor/escalado_container.png)
+![Container](./../_media/04_aplicacions_e_servizos_multicontedor/escalado_container.png)
 
 E, por suposto, podemos engadir os servicios auxiliares que creamos convintes, sen necesidade de modifica-los containers que xa temos (**encapsulación**).
 
-![Network](./../_media/04_aplicacions_e_servizos_multicontedor/escalado_funcional.png)
+![Container](./../_media/04_aplicacions_e_servizos_multicontedor/escalado_funcional.png)
 
 Como podemos ver, a nosa aplicación **crece engandindo novas unidades funcionais**, **non modificando as existentes**. Esto aporta as vantaxes das que xa falaramos na sección previa.
 

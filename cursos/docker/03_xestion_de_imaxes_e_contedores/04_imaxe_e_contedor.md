@@ -15,19 +15,19 @@ O "truco" é concetualmente sinxelo: Docker non corre o noso container directame
 
 Partamos dun container correndo e baseado nunha imaxe:
 
-![Network](./../_media/03_xestion_de_imaxes_e_contedores/imaxe_e_contedor_1.png)
+![Container imaxe](./../_media/03_xestion_de_imaxes_e_contedores/imaxe_e_contedor_1.png)
 
 Realmente, a imaxe está formada polas capas propias da imaxe e por unha capa de container. Tan só a capa de container é de **ESCRITURA/LECTURA**.
 
-![Network](./../_media/03_xestion_de_imaxes_e_contedores/imaxe_e_contedor_2.png)
+![Container imaxe](./../_media/03_xestion_de_imaxes_e_contedores/imaxe_e_contedor_2.png)
 
 Deste xeito, os programas correndo no container poden escribir no sistema de ficheiros de xeito natural sen ser conscientes de que, realmente, están a escribir nunha capa asociada ó container e non na imaxe que é inmutable. 
 
-![Network](./../_media/03_xestion_de_imaxes_e_contedores/imaxe_e_contedor_3.png)
+![Container imaxe](./../_media/03_xestion_de_imaxes_e_contedores/imaxe_e_contedor_3.png)
 
 Isto posibilita que, cada container, poida face-las súas modificacións no sistema de ficheiros sen afectar a outros containers que estén baseados na mesma imaxe, dado que, **cada container ten asociada unha capa de container específica para él**. 
 
-![Network](./../_media/03_xestion_de_imaxes_e_contedores/imaxe_e_contedor_4.png)
+![Container imaxe](./../_media/03_xestion_de_imaxes_e_contedores/imaxe_e_contedor_4.png)
 
 Tal e como podemos ver, este mecanismo é moi útil. Non obstante, esto produce un problema: **a volatilidade dos datos**.
 

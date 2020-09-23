@@ -4,11 +4,11 @@ Unha das solucións que se empregan para evitar o problema da falta de illamento
 
 Existen diversas técnicas (paravirtualización, full virtualization) pero a idea á a mesma: virtualizar o hardware, esto é, simular un ordenador mediante software.
 
-![Network](./../_media/01_que_e_un_contedor_de_software/container_5.png)
+![Container](./../_media/01_que_e_un_contedor_de_software/container_5.png)
 
 De esta forma, e dado que temos varias máquinas virtuais, cada unha co seu sistema operativo, podemos illar os recursos globaies antes mencionados.
 
-![Network](./../_media/01_que_e_un_contedor_de_software/container_6.png)
+![Container](./../_media/01_que_e_un_contedor_de_software/container_6.png)
 
 Non obstante,
 

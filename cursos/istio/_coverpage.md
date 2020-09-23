@@ -14,4 +14,3 @@
 [Empezar](#Presentación)
 
 ![color](#BFD1E5)
-

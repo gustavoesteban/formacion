@@ -10,11 +10,11 @@ Tanto desenvolvedores oficiais de software como empresas e aficionados ofrecen o
 
 > Basta con ir ó portal de dockerhub, e introducir no caxetín de búsqueda o nome do software da nosa escolla:
 
-![Network](./../_media/03_xestion_de_imaxes_e_contedores/dockerhub_search.png)
+![DockerHub search](./../_media/03_xestion_de_imaxes_e_contedores/dockerhub_search.png)
 
 Se probamos a introducir a palabra "**nginx**", veremos unha serie de resultados:
 
-![Network](./../_media/03_xestion_de_imaxes_e_contedores/dockerhub_find.png)
+![DockerHub find](./../_media/03_xestion_de_imaxes_e_contedores/dockerhub_find.png)
 
 Como podemos ver, o Dockerhub categoriza as imaxes expoñendo unha serie de datos sobre elas:
 

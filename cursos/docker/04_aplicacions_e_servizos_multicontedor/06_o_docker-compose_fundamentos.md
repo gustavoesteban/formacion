@@ -53,7 +53,7 @@ Imaxinemos que temos un servizo en PHP que se conecta a outro que corre unha bbd
 
 Se o metemos nunha rede común, o servizo de PHP vai a ter definido un host (bbdd) **que coincide co nome do servizo de bbdd** sen ter que preocuparse da IP do contedor.
 
-![Network](./../_media/04_aplicacions_e_servizos_multicontedor/redes.png)
+![Container](./../_media/04_aplicacions_e_servizos_multicontedor/redes.png)
 
 Se o definimos nun compose:
 

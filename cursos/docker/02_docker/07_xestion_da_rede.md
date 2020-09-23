@@ -18,13 +18,13 @@ Deste xeito, e sempre dende o punto de vista do contedor, podemos establecer as 
 
 Así, poderíamos ter un contedor cun apache conectado ó porto 80:
 
-![Network](./../_media/02_docker/contedor_porto.png)
+![Container porto](./../_media/02_docker/contedor_porto.png)
 
 Ou poderíamos ter varios contedores con servizos apache conectados ó porto 80:
 
 Ou poderíamos ter varios contedores con servizos apache conectados ó porto 80:
 
-![Network](./../_media/02_docker/contedores_porto.png)
+![Containers porto](./../_media/02_docker/contedores_porto.png)
 
 Dado que cada un deles ten o seu propio namespace de rede, non habería ningún problema de colisión entre servizos conectados ó mesmo porto en contedores diferentes. 
 
@@ -38,7 +38,7 @@ Tal e como viramos na sección anterior, dentro dun contedor dispoñemos de todo
 
 Nembargantes, con iso non é suficiente para que o se poida chegar ó noso contedor dende o mundo exterior. Así:
 
-![Network](./../_media/02_docker/contedor_conexion_0.png)
+![Container conexión](./../_media/02_docker/contedor_conexion_0.png)
 
 Como vemos, o noso contedor está aillado do mundo exterior, por moito que o apache esté presente e conectado ó porto 80 dentro do contedor. 
 
@@ -89,7 +89,7 @@ Como vemos, a novidade aquí é o *(-p 9090:80)*:
 - O porto 80 é o de dentro do contedor (onde escoita o noso apache)
 Nun diagrama:
 
-![Network](./../_media/02_docker/contedor_conexion_1.png)
+![Container conexión](./../_media/02_docker/contedor_conexion_1.png)
 
 Agora o porto 80 do noso contedor está conectado ó porto 9090 da máquina anfitriona. Podemos, por tanto, chegar ó apache que corre dentro sen problema dende o exterior:
 

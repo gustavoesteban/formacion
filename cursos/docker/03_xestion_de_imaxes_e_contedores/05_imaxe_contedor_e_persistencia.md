@@ -11,17 +11,17 @@ O problema xorde en que, se o container é volátil, a capa asociada a ese conta
 
 Imaxinemos que o noso container escribe datos clave nun ficheiro situado no sistema de archivos:
 
-![Network](./../_media/03_xestion_de_imaxes_e_contedores/container_escribe_datos.png)
+![Container](./../_media/03_xestion_de_imaxes_e_contedores/container_escribe_datos.png)
 
 Agora xa sabemos que todos esos cambios realmente se están a facer na capa onde o container pode escribir, isto é, **na capa de container**. 
 
 Se por algunha razón, o container cae ou desaparece, tamén o fai a capa de datos asociada ó mesmo. 
 
-![Network](./../_media/03_xestion_de_imaxes_e_contedores/container_escribe_datos_desaparece.png)
+![Container](./../_media/03_xestion_de_imaxes_e_contedores/container_escribe_datos_desaparece.png)
 
 Isto supón que, si relanzamos un container, vai ter unha nova capa de datos (asociada ó container) e, polo tanto, **non ten ese ficheiro de datos, ou os seus cambios**.
 
-![Network](./../_media/03_xestion_de_imaxes_e_contedores/container_escritura_datos_error.png)
+![Container](./../_media/03_xestion_de_imaxes_e_contedores/container_escritura_datos_error.png)
 
 ## Solucións ó problema da persistencia
 

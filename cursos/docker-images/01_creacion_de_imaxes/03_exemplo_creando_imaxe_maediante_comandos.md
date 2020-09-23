@@ -32,7 +32,7 @@ Para segui-lo noso ciclo de evolución, imos a empregar o container **saudo-cont
 
 Compre que instalemos o apache2 no noso container e que despois fagamos un commit dos cambios á nosa imaxe. Nun esquema:
 
-![Network](./../_media/01_creacion_de_imaxes/imaxe_paso_1.png)
+![Pasos](./../_media/01_creacion_de_imaxes/imaxe_paso_1.png)
 
 Arrincamos un container para face-lo traballo de instalar o **apache2**:
 
@@ -90,7 +90,7 @@ Coa base que temos do paso anterior, imos arrincar de novo un container (xa base
 
 Nun esquema, quedaría:
 
-![Network](./../_media/01_creacion_de_imaxes/imaxe_paso_2.png)
+![Pasos](./../_media/01_creacion_de_imaxes/imaxe_paso_2.png)
 
 Para comezar, arrincamos un novo container baseado na imaxe de saudo-galego que xa producimos no paso anterior:
 
@@ -140,7 +140,7 @@ Coma sempre, borramos o container de traballo porque non o precisamos máis. É 
 
 O proceso completo quedaría como segue:
 
-![Network](./../_media/01_creacion_de_imaxes/imaxe_pasos.png)
+![Pasos](./../_media/01_creacion_de_imaxes/imaxe_pasos.png)
 
 ## IV. Empregando a imaxe de saudo-galego
 

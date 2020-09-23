@@ -21,4 +21,4 @@ Os cgroups pódense ver como unha árbore en que os procesos están pendurados d
 
 A flexibilidade que permiten é moi grande. Pódense crear distintos grupos de limitacións e control e asignar un proceso, e os seus fillos, a distintos grupos, facendo combinacións que permiten un grao moi alto de personalización. 
 
-![Network](./../_media/01_que_e_un_contedor_de_software/cgroups_1.png)
+![CGroups](./../_media/01_que_e_un_contedor_de_software/cgroups_1.png)

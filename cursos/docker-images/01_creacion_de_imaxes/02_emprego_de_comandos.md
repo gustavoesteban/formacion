@@ -6,22 +6,22 @@ Non obstante, as imaxes pódense evolucionar. Para facelo a clave está, precisa
 
 Partamos dun container que fai cambios no seu sistema de ficheiros.
 
-![Network](./../_media/01_creacion_de_imaxes/crear_container_de_imaxe.png)
+![Container](./../_media/01_creacion_de_imaxes/crear_container_de_imaxe.png)
 
 Como sabemos, esos cambios quedan reflectidos no súa capa de container.
 
 Se detemos agora o container, de tal xeito que non poida facer máis cambios:
 
-![Network](./../_media/01_creacion_de_imaxes/crear_container_de_imaxe_detido.png)
+![Container](./../_media/01_creacion_de_imaxes/crear_container_de_imaxe_detido.png)
 
 Nótese que o container está **detido**, non **destruido**, polo tanto o container non está a correr pero está presente no motor de Docker, e polo tanto tamén a súa capa de datos.
 
 Se agora collemos esa capa de datos propia do container e facemos un **commit**, o que estamos a facer e producir unha nova imaxe que sí que incorpora os cambios da capa de container á súa propia estrutura interna.
 
-![Network](./../_media/01_creacion_de_imaxes/crear_container_de_imaxe_detido_commit.png)
+![Container](./../_media/01_creacion_de_imaxes/crear_container_de_imaxe_detido_commit.png)
 
 En definitiva, **acabamos de evoluciona-la imaxe**. E os novos containers baseados nesa nova imaxe sí verán os cambios que fixeramos no container orixinal.
 
 Este precisamente, é o ciclo de evolución das imaxes en Docker.
 
-![Network](./../_media/01_creacion_de_imaxes/evolucion_da_imaxe.png)
+![Container](./../_media/01_creacion_de_imaxes/evolucion_da_imaxe.png)

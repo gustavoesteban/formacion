@@ -38,7 +38,7 @@ Para facer unha imaxe da web "gatiño do día" imos dividi-lo traballo en dúas 
 1. **Constructor**: imos instalar todo o software necesario para clona-lo repo e instalar as librarías de proxecto. Todo o software resultante e estrictamente necesario vaise poñer nun directorio: o **/venv**. O resto do software do contedor vaise desbotar.
 2. **Final**: imos montar o directorio resultante da fase anterior (o /venv) nun novo contedor que terá o mínimo necesario para move-lo python (o [pipenv](https://docs.python-guide.org/dev/virtualenvs/)).
 
-![Network](./../_media/01_creacion_de_imaxes/multi-staging.png)
+![multistaging](./../_media/01_creacion_de_imaxes/multi-staging.png)
 
 Se o vemos nun Dockerfile:
 

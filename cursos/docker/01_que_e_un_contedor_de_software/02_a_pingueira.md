@@ -8,7 +8,7 @@ Pero, ¿logran os SO illar todos los recursos dunha máquina?
 
 La respuesta é que non. Alomenos nos entornos UNIX, existen unha serie de recursos que son comúns e, polo tanto, globais para todos os procesos.
 
-![Network](./../_media/01_que_e_un_contedor_de_software/container_4.png)
+![Container](./../_media/01_que_e_un_contedor_de_software/container_4.png)
 
 Estos recursos son:
 

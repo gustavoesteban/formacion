@@ -7,7 +7,7 @@ Sen embargo, nesta sección imos profundizar no concepto de imaxe botando unha o
 ## 1. Os unions mounts
 Un union mount é un sistema que permite combinar diferentes directorios nun só que se ve como unha mestura dos mesmos: de ahí o seu nome.
 
-![Network](./../_media/01_creacion_de_imaxes/union_1.png)
+![Union](./../_media/01_creacion_de_imaxes/union_1.png)
 
 ### A. Xogando cos union mounts
 
@@ -70,7 +70,7 @@ As capas montadas neste nivel non poder ser modificadas ou eliminadas.
 
 En caso de modificar un ficheiro pertencente a esta capa, o que se vai facer e copialo (COW - copy on write) a unha capa superior, ó upperdir.
 
-![Network](./../_media/01_creacion_de_imaxes/union_3.png)
+![Union](./../_media/01_creacion_de_imaxes/union_3.png)
 
 O copy-up recibe o seu nome de esa operación de copia-lo ficheiro dunha capa de lowerdir a unha de upperdir antes de modificala. Esto permite dúas cousas:
 

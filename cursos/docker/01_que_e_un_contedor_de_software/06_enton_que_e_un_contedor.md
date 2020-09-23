@@ -4,7 +4,7 @@
 
 O contedor está baseado nos namespaces que o manteñen "separado" do resto do sistema.
 
-![Network](./../_media/01_que_e_un_contedor_de_software/container_9.png)
+![Container](./../_media/01_que_e_un_contedor_de_software/container_9.png)
 
 A medio camiño entre o chroot e as solucións del virtualización completas (KVM, VirtualBox, VMWare, Xen) o contedor no incurre no custo de virtualizar o hardware ou o kernel do SO ofrecendo, así e todo, un nivel de control e illamento moi superior ao do chroot.
 
