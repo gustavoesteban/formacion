@@ -1,0 +1,9 @@
+- name: Run playbook
+  uses: dawidd6/action-ansible-playbook@v2
+  with:
+    playbook: playbook_repo_pull.yml
+    directory: ../../ansiblecat
+    key: ${{secrets.PRIVATE_KEY}}
+    inventory:
+      [web]
+      178.128.186.207
