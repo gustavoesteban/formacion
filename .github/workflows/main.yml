@@ -1,9 +1,5 @@
-- name: Run playbook
-  uses: dawidd6/action-ansible-playbook@v2
+- name: Play Ansible Playbook
+  uses: arillso/action.playbook@master
   with:
-    playbook: playbook_repo_pull.yml
-    directory: ../../ansiblecat
-    key: ${{secrets.PRIVATE_KEY}}
-    inventory:
-      [web]
-      178.128.186.207
+    playbook: ansible/playbook_repo_pull.yml
+    inventory: ansible/hosts.yml
