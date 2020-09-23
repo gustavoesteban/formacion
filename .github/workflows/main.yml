@@ -1,4 +1,4 @@
-- name: Play Ansible Playbook
+-name: Play Ansible Playbook
   uses: arillso/action.playbook@master
   with:
     playbook: ansible/playbook_repo_pull.yml
