@@ -1,4 +1,8 @@
-on: push
+on:
+  push:
+    branches:
+      - master
+
 name: Pull repo
 jobs:
   pull-repo:

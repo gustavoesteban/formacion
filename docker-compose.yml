@@ -72,7 +72,7 @@ services:
     container_name: curso-${COURSE_3_NAME}
     restart: always
     ports:
-      - "3003:3000"
+      - "${COURSE_3_PORT}:3000"
     volumes:
       - ./cursos/${COURSE_3_NAME}:/usr/local/docsify
     environment:
@@ -80,6 +80,18 @@ services:
       - LETSENCRYPT_HOST=${COURSE_3_NAME}.${DOMAIN}
       - LETSENCRYPT_EMAIL=${EMAIL}
 
+  curso-4:
+    image: curso:base
+    container_name: curso-${COURSE_4_NAME}
+    restart: always
+    ports:
+      - "${COURSE_4_PORT}:3000"
+    volumes:
+      - ./cursos/${COURSE_4_NAME}:/usr/local/docsify
+    environment:
+      - VIRTUAL_HOST=${COURSE_4_NAME}.${DOMAIN},www.${COURSE_4_NAME}.${DOMAIN}
+      - LETSENCRYPT_HOST=${COURSE_4_NAME}.${DOMAIN}
+      - LETSENCRYPT_EMAIL=${EMAIL}
 volumes: 
   certs:
   html:
