@@ -92,6 +92,7 @@ services:
       - VIRTUAL_HOST=${COURSE_4_NAME}.${DOMAIN},www.${COURSE_4_NAME}.${DOMAIN}
       - LETSENCRYPT_HOST=${COURSE_4_NAME}.${DOMAIN}
       - LETSENCRYPT_EMAIL=${EMAIL}
+
 volumes: 
   certs:
   html:
