@@ -9,11 +9,7 @@ $(document).ready(function () {
 });
 
 document.addEventListener("DOMContentLoaded", function (event) {
-  var dataText = [
-    "Istio",
-	"Node.js",
-	"Docker-Images",
-  ];
+  var dataText = ["Docker", "Node.js", "Docker-Images", "Istio"];
 
   function typeWriter(text, i, fnCallback) {
     if (i < text.length) {
