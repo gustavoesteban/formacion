@@ -1,5 +1,5 @@
 - Presentación
-  - [Presentación](./01_presentacion/01_presentacion.md.md)
+  - [Presentación](./01_presentacion/01_presentacion.md)
   - [Manual](./01_presentacion/02_manual.md)
   - [Contexto](./01_presentacion/03_contexto.md)
 
