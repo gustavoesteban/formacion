@@ -1,6 +1,6 @@
 # Presentación
 
-![bienbenida](_media/bienvenida.jpg)
+![bienbenida](../_media/bienvenida.jpg)
 
 ---
 
