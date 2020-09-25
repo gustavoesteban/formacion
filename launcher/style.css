@@ -155,6 +155,9 @@ h2.tagline2 {
 .text2 {
   color: #84b4b1;
   font-weight: 800;
+  font-size: 30px;
+  font-family: monospace;
+
 }
 
 .text3 {
