@@ -1,4 +1,6 @@
-#  Qué es?
+# camelCase
+
+##  Qué es?
 
 En el momento de definir el nombre de las varibales de nuestro programa nos encontramos con la necesidad de escribir una serie de palabras concatenadas que describan el contenido de la variable pero sin pasarnos con la cantidad para no hacerla farragosamente larga. Sin embargo, en ocasiones nos vemos forzados a escribir algo como esto:
 
@@ -35,6 +37,7 @@ Su uso no es obligatorio ya que no existe ninguna regla de sintaxis que nos lo o
 El nombre camelCase tiene su orgien en el parecido que tienen la forma de las jorobas de los camellos y la forma de jorobas que dibujan las mayúsculas entre las minúsculas.
 
 > Si usamos camelCase ```lowerCamelCase```, que es el más común, para nuestro caso quedaría así:
+
 ```
     numTotalDias // de forma regular se capitaliza la primera letra de cada término desde el segundo.
     listPrecsSinIVA // en el caso de acrónimos, se ponen en mayúsculas.

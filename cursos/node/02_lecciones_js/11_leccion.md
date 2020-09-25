@@ -1,13 +1,16 @@
 # Operadores relacionales
 
-# Definición
+## Definición
+
 Estos operadores, también llamados relacionales, comparan los operandos (a su izquierda y derecha) y devuelve un valor booleano basándose en si la comparación es verdadera o no (falta).
 
-# Sintaxis
+## Sintaxis
+
 ```operando1``` ```operadorRelacional``` ```operando2```
 
-# Tipos
-- ## Mayor ```>``` que
+## Tipos
+
+- ### Mayor ```>``` que
 
 Compara y evalúa si el operando de la izquierda es mayor al operando de la derecha.
 
@@ -18,7 +21,7 @@ Compara y evalúa si el operando de la izquierda es mayor al operando de la dere
     console.log('a' > 'z'); // false
 ```
 
-- ## Menor ```<``` que
+- ### Menor ```<``` que
 
 Compara y evalúa si el operando de la izquierda es menor al operando de la derecha.
 
@@ -29,7 +32,7 @@ Compara y evalúa si el operando de la izquierda es menor al operando de la dere
     console.log('a' < 'z'); // true
 ```
 
-- ## Mayor o igual ```>=``` que
+- ### Mayor o igual ```>=``` que
 
 Compara y evalúa si el operando de la izquierda es mayor o igual al operando de la derecha.
 
@@ -42,7 +45,7 @@ Compara y evalúa si el operando de la izquierda es mayor o igual al operando de
     console.log('a' >= 'a'); // true
 ```
 
-- ## Menor o igual ```<=``` que
+- ### Menor o igual ```<=``` que
 
 Compara y evalúa si el operando de la izquierda es menor o igual al operando de la derecha.
 
@@ -55,7 +58,8 @@ Compara y evalúa si el operando de la izquierda es menor o igual al operando de
     console.log('a' <= 'a'); // false
 ```
 
-# Ejemplo de uso
+## Ejemplo de uso
+
 Un uso muy extendido se da cuando se desea evaluar una condición en una estructura de control ```if...else``` o ```switch```.
 
 ```js

@@ -1,9 +1,11 @@
-# 
+# Operadores lógicos
 
-# Definición
+## Definición
+
 Los operadores lógicos comparan los operandos (a su izquierda y derecha) y devuelve un valor booleano basándose en si la comparación es verdadera o no.
 
-# Sintaxis
+## Sintaxis
+
 Para ```&&``` y ```||```
 
 - ```operando1``` ```operadorLogico``` ```operando2```
@@ -12,7 +14,7 @@ Para ```!```
 
 - ```operadorLogico operando2```
 
-# Tipos
+## Tipos
 
 - El operador ```&&``` evalúa que los dos operandos se cumplan.
 
@@ -20,7 +22,8 @@ Para ```!```
 
 - El operador ```!``` evalúa que el operando sea distinto al propuesto.
 
-# Ejemplo de uso
+## Ejemplo de uso
+
 Un uso muy extendido es cuando se desea evaluar una condición en una estructura de control ```if...else``` o ```switch```.
 
 ```js

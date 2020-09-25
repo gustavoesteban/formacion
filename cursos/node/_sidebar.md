@@ -16,17 +16,17 @@
   - [10 - Operador delete](/02_lecciones_js/10_leccion.md)
   - [11 - Operadores de comparación](/02_lecciones_js/11_leccion.md)
   - [12 - Operadores de igualdad](/02_lecciones_js/12_leccion.md)
-  - [13 - Operradores lógicos](/02_lecciones_js/13_leccion.md)
-  - [14 - Operadores aritméticos | inc | dec |](/02_lecciones_js/14_leccion.md)
+  - [13 - Operadores lógicos](/02_lecciones_js/13_leccion.md)
+  - [14 - Operadores aritméticos](/02_lecciones_js/14_leccion.md)
 
 - Lecciones Node.js
 
 - Proyectos
 
 - Píldoras 💊
-  - [camelCase](/03_pildoras/01_pildora.md)
-  - [Escapar caracteres](/03_pildoras/02_pildora.md)
-  - [Optimización condicionales](/03_pildoras/03_pildora.md)
-  - ["use strict"](/03_pildoras/04_pildora.md)
+  - [camelCase](/04_pildoras/01_pildora.md)
+  - [Escapar caracteres](/04_pildoras/02_pildora.md)
+  - [Optimización de condicionales](/04_pildoras/03_pildora.md)
+  - ["use strict"](/04_pildoras/04_pildora.md)
 
 - Diccionario

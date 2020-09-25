@@ -1,15 +1,17 @@
-# 
+# Operador **delete**
 
-# Definición
+## Definición
+
 Es un operador (unitario) que elimina la propiedad de un objeto. En el caso de variables globales declaradas y objetos propios del lenguaje, no tendra efecto el operador ```delete```.
 
-# Sintaxis
+## Sintaxis
 
 ```js
     delete nombreObjeto['propiedad']
 ```
 
-# Usos
+## Usos
+
 - Eliminando porpiedad de un objeto propio. ```true```.
 
 ```js
@@ -50,8 +52,9 @@ Es un operador (unitario) que elimina la propiedad de un objeto. En el caso de v
     console.log(Math.E); // 2.718281828459045
 ```
 
-# Uso alternativo
-Primero veamos como se hace con el método ```pop()``` y notemos como afecta a la lomgitud (valor que devuelve la propiedad ```length```).
+## Uso alternativo
+
+Primero veamos como se hace con el método ```pop()``` y notemos como afecta a la longitud (valor que devuelve la propiedad ```length```).
 
 ```js
     var miArray = [1, 2, 3, 4];
@@ -62,7 +65,7 @@ Primero veamos como se hace con el método ```pop()``` y notemos como afecta a l
     console.log(miArray.length); // 3
 ```
 
-Sin embago, se puede usar el operador ```delete``` para eliminar un valor de un array. Este mantendrá la longitud (valor que devuelve la propiedad ```length```) ya que en su lugar habrá un espacio sin valor (```undefined```).
+Sin embago, se puede usar el operador ```delete``` para eliminar un valor de un array. Este mantendrá la longitud (valor que devuelve la propiedad ```length```) ya que en su lugar habrá un espacio sin valor (```undefined```). Lo que sucede es que no elimina el la posición (el cajón), si no que elimina el valor (vacia el cajón).
 
 ```js
     var miArray = [1, 2, 3, 4];

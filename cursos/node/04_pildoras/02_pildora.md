@@ -1,4 +1,4 @@
-# Escapar caracter.
+# Escapar caracter
 
 >Qué sucede cuando queremos que una cadena de texto tenga un caracter ```"``` en su interior y que esto no afecte al código:
 

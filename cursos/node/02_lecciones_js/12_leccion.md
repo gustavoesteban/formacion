@@ -1,14 +1,16 @@
-# 
+# Operadores de igualdad
 
-# Definición
+## Definición
+
 Este conjunto de operadores de igualdad comparan los operandos (a su izquierda y a su derecha) y devuelve un valor booleano basándose en si la comparación es verdadera o no.
 
-# Sintaxis
+## Sintaxis
+
 ```operando1``` ```operadorIgualdad``` ```operando2```
 
-# Tipos
+## Tipos
 
-- ## Igual ```==```
+- ### Igual ```==```
 
 Compara y evalúa si hay igualdad en el valor del dato de los dos operandos.
 
@@ -20,7 +22,7 @@ Compara y evalúa si hay igualdad en el valor del dato de los dos operandos.
     console.log('1' == 1); // true ya que sólo implica mismo valor
 ```
 
-- ## Estrictamente igual ```===```
+- ### Estrictamente igual ```===```
 
 Compara y evalúa si hay igualdad en el valor del dato o en el tipo de dato de los dos operandos.
 
@@ -32,7 +34,7 @@ Compara y evalúa si hay igualdad en el valor del dato o en el tipo de dato de l
     console.log('1' === 1); // false ya que implica mismo valor y mismo tipo
 ```
 
-- ## Desigual ```!=```
+- ### Desigual ```!=```
 
 Compara y evalúa si hay desigualdad en el valor del dato de los dos operandos.
 
@@ -44,7 +46,7 @@ Compara y evalúa si hay desigualdad en el valor del dato de los dos operandos.
     console.log('1' != 1); // false
 ```
 
-- ## Estrictamente desigual ```!==```
+- ### Estrictamente desigual ```!==```
 
 Compara y evalúa si hay desigualdad en el valor del dato o en el tipo de dato de los dos operandos.
 
@@ -56,7 +58,8 @@ Compara y evalúa si hay desigualdad en el valor del dato o en el tipo de dato d
     console.log('1' !== 1); // true
 ```
 
-# Ejemplo de uso
+## Ejemplo de uso
+
 Su principal uso es cuando desea evaluar una condición en una estructura de control ```if...else``` o ```switch```.
 
 ```js

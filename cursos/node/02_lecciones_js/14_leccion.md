@@ -1,11 +1,13 @@
-# 
+# Operadores aritméticos
 
-# Definición
+## Definición
+
 Los operadores aritméticos son un conjunto de símbolos que permiten expresar una operación matemática. Aplicando a dos operandos da como resultado un tercero.
 
 Los operadores de ```--``` decremento  e ```++``` incremento, disminuirán y aumentarán respectivamente en un entero (1) el valor dado.
 
-# Sintaxis
+## Sintaxis
+
 - Suma
 ```[operando1 + operando2]```
 
@@ -29,7 +31,8 @@ Los operadores de ```--``` decremento  e ```++``` incremento, disminuirán y aum
 ```variable++``` | 
 ```++variable```
 
-# Operadores
+## Operadores
+
 - El operador de adición ```+``` suma dos operandos.
 
 ```js
@@ -87,7 +90,8 @@ Los operadores de ```--``` decremento  e ```++``` incremento, disminuirán y aum
 
     console.log(a); // 7
 ```
-# Ejemplos de uso
+## Ejemplos de uso
+
 > Operación con cinco de los operadores anteriormente citados.
 
 ```js

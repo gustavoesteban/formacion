@@ -1,17 +1,20 @@
-# 
+# Operador **typeof**
 
-# Definición
+## Definición
+
 **typeof** es un operador que devuelve un string con el operando (string, variable, palabra clave u objeto). Conocer de qué tipo de dato se trata, tiene mucha utilidad en el caso de que necesitemos evaluarlo antes de procesarlo.
 
-# Sintaxis
+## Sintaxis
+
 Cualquiera de las dos formas es válida. Se aconseja la primera de las dos formas por tener mejor legibilidad.
 
 ```typeof (operando)```
 
 ```typeof operando```
 
-# Tipos de operandos
-- ## **function**
+## Tipos de operandos
+
+- ### **function**
 
 ```js
 var func = function() { };
@@ -19,7 +22,7 @@ var func = function() { };
 console.log(typeof (func)); // 'function'
 ```
 
-- ## **string**
+- ### **string**
 
 ```js
     var cadena = 'Hola mundo';
@@ -27,7 +30,7 @@ console.log(typeof (func)); // 'function'
     console.log(typeof (cadena)); // 'string'
 ```
 
-- ## **number**
+- ### **number**
 
 ```js
     var numero = 123;
@@ -35,7 +38,7 @@ console.log(typeof (func)); // 'function'
     console.log(typeof (numero)); // 'number'
 ```
 
-- ## **object**
+- ### **object**
 
 ```js
     var hoy = new Date();
@@ -51,7 +54,7 @@ console.log(typeof (func)); // 'function'
     console.log(typeof (array)); // 'object'
 ```
 
-- ## **undefined**
+- ### **undefined**
 
 ```js
     var noDefinido;
@@ -59,7 +62,7 @@ console.log(typeof (func)); // 'function'
     console.log(typeof (noDefinido)); // 'undefined'
 ```
 
-- ## **booleano**
+- ### **booleano**
 
 ```js
     var booleano = true;
@@ -67,7 +70,7 @@ console.log(typeof (func)); // 'function'
     console.log(typeof (booleano)); // 'boolean'
 ```
 
-# Ejemplo de uso
+## Ejemplo de uso
 
 ```js
     var numero = 'Hola mundo';
