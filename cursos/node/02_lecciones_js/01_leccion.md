@@ -1,10 +1,12 @@
-# 
-# Cómo ejecutar JavaScript.
+# Ecosistema
+
+## Cómo ejecutar JavaScript
+
 JavaScript es un lenguaje de programación muy popular y original de 1995. Desde aquel momento ha evolucionado mucho como también lo ha hecho su comunidad. Acompañando a esta evolución han surgido diferentes maneras de ejecutar el código tanto si hablamos donde se ejecuta como si hablamos de donde veremos el resultado de la ejecución. Para hacerlo sencillo veremos cuatro formas.
 
 \**Nota - Se asume que los programas futuramente citados están instalados y abiertos.*
 
-> # Usando la consola del navegador
+> ## Usando la consola del navegador
 
 Con [**Google Chrome**](https://www.google.es/chrome/index.html "Google Chrome") podemos ejecutar código **JavaScript** pero con algunas limitaciones ya que iremos línea a línea.
 
@@ -19,7 +21,7 @@ Con [**Google Chrome**](https://www.google.es/chrome/index.html "Google Chrome")
     a; // "Hola mundo"
 ```
 
-> # Ejecutando el código en el navegador
+> ## Ejecutando el código en el navegador
 
 Con [**Google Chrome**](https://www.google.es/chrome/index.html "Google Chrome") y escribiéndolo en un IDE como [**Visual Studio Code**](https://code.visualstudio.com/ "Visual Studio Code") mediante una extensión llamada [**Live Server**](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer "Live Server") que hará la función de servidor local.
 
@@ -67,7 +69,7 @@ Con [**Google Chrome**](https://www.google.es/chrome/index.html "Google Chrome")
 
 12. Abrimos la consola *Console*. Se visualizará el ```console.log``` con el mensaje ```"Hola mundo"```.
 
-> # Con la terminal interada
+> ## Con la terminal interada
 
 Empleando [**NodeJs**](https://nodejs.org/es/ "NodeJs") desde la terminal integrada de [**Visual Studio Code**](https://code.visualstudio.com/ "Visual Studio Code").
 
@@ -91,12 +93,11 @@ Empleando [**NodeJs**](https://nodejs.org/es/ "NodeJs") desde la terminal integr
 
 8. La terminal integral nos devolverá ```Hola mundo```.
 
-> # Vía web
+> ## Vía web
 
 Existen en internet una infinidad de servicios webs que prestan gratuitamente servicios para la ejecución de código **JavaScript**.
 
 - Servicios basados en [**ECMAScript**](https://tc39.es/ecma262/ "ECMAScript") que permite usar **html**, **css** y **JavaScript**:
-
 
  - [**codepad**](https://codepad.co/playground "codepad") - Guarda proyecto.
 

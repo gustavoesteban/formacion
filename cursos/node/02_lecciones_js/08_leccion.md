@@ -1,13 +1,14 @@
-# 
+# Date
 
-# Definición
+## Definición
+
 **Date** es un objeto que forma parte de **JavaScript** y que tiene una serie de métodos que nos permite trabajar con fechas. **Date** nos ayuda cuando tenemos la necesidad de almacenar datos tipo fecha, cálculo de diferencia entre fechas, calculo de transcurso de tiempo, etc...
 
-# Sintaxis
+## Sintaxis
 
 ```get[valor]()```
 
-# Formato
+## Formato
 
 - Se usa el formato aaaa-mm-dd-hh-mm-ss-msmsms.
 
@@ -31,7 +32,8 @@
 
 - Los milisegundos tienen por valor [0-999].
 
-# Constructor
+## Constructor
+
 Como cualquier otro objeto, se puede crear un constructor.
 
 - Hora actual.
@@ -50,14 +52,15 @@ Como cualquier otro objeto, se puede crear un constructor.
     console.log(fecha.getUTCFullYear(), fecha.getMonth(), fecha.getDay()); // 2000 11 5
 ```
 
-# Métodos
+## Métodos
+
 Para los ejemplos usaremos:
 
 ```js
      ahora = new Date();
 ```
 
-- ## **getTime**
+- ### **getTime**
 
 Sintaxis: ddate.getTime()
 
@@ -69,7 +72,7 @@ Definición: devuelve la cantidad de milisegundos transcurridos desde 1970/1/1 h
     console.log(desde); // 1569097143586
 ```
 
-- ## **getTimezoneOffset**
+- ### **getTimezoneOffset**
 
 Sintaxis: date.getTimezoneOffset()
 
@@ -81,7 +84,7 @@ Definición: devuelve en minutos la diferencia horaria que hay entre la hora loc
     console.log(diferencia); // -180
 ```
 
-- ## **getFullYear**
+- ### **getFullYear**
 
 Sintaxis date.getFullYear()
 
@@ -93,7 +96,7 @@ Definición: devuelve el año.
     console.log(anho); // 2040
 ```
 
-- ## **getMonth**
+- ### **getMonth**
 
 Sintaxis: date.getMonth()
 
@@ -105,7 +108,7 @@ Definición: devuelve el mes.
     console.log(mes); // 4
 ```
 
-- ## **getDate**
+- ### **getDate**
 
 Sintaxis: date.getDate()
 
@@ -117,7 +120,7 @@ Definición: devuelve el día del mes.
     console.log(dia); // 14
 ```
 
-- ## **getDay**
+- ### **getDay**
 
 Sinatxis date.getDay()
 
@@ -129,7 +132,7 @@ Definición: devuelve el día de la semana.
     console.log(diaSemana); // 5
 ```
 
-- ## **getHours**
+- ### **getHours**
 
 Sintaxis: date.getHors()
 
@@ -141,7 +144,7 @@ Definición: devuelve la hora.
     console.log(hora); // 17
 ```
 
-- ## **getMinutes**
+- ### **getMinutes**
 
 Sintaxis: date.getMinutes()
 
@@ -153,7 +156,7 @@ Definición: devuelve el minuto.
     console.log(minuto); // 55
 ```
 
-- ## **getSeconds**
+- ### **getSeconds**
 
 Sintaxis date.getSeconds()
 
@@ -165,7 +168,7 @@ Definición: devuelve el segundo.
     console.log(segundo); // 23
 ```
 
-- ## **getMilliseconds**
+- ### **getMilliseconds**
 
 Sintaxis date.getMilliseconds()
 
@@ -179,7 +182,8 @@ Definición: devuelve el milisegundo.
 
 > Si queremos lo mismo que los métodos anteriores (FullYear, Month, Date, Hours, Minutes, Seconds, Milliseconds, Day) pero en modo UTC, es decir, la hora universal, usaremos el formato ```getUTC```[método]```()```. Por ejemplo ```getUTC```Hour```()``` 👀.
 
-# Operar con fechas
+## Operar con fechas
+
 Para operar con fechas basta con operar como si de números se tratase.
 
 ```js
@@ -192,7 +196,8 @@ Para operar con fechas basta con operar como si de números se tratase.
     console.log(edad); // 34
 ```
 
-# Función **setTimeout()**
+## Función **setTimeout()**
+
 Esta función ejecutará, pasados X milisegundos, una función anónima que definamos una sóla vez. Su uso es muy conveniente para simular la demora que tarda una conexión, la demora que puede tardar una API en devolvernos un dato, en juegos, etc...
 
 > *Nota: cada 1000 milisegundos es 1 segundo.
@@ -221,7 +226,8 @@ Alternativamente, con una función flecha que veremos en lecciones posteriores.
     setTimeout( () => console.log('Hola mundo'), 1000)
 ```
 
-# Función **setInterval()**
+## Función **setInterval()**
+
 Esta función es similar a la anterior con la diferencia de que ejecutará la función interna de forma indefinida cada X milisegundos hasta que detengamos voluntariamente la ejecución. La primera ejecución se hace aplicando la demora y no de forma inmediata.
 
 > *Nota: Para detener la ejecución en una terminal e impedir que se ejecute indefinidamete ```Ctrl + C```.

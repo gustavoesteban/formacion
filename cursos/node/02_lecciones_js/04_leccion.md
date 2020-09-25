@@ -1,9 +1,11 @@
-# 
+# Strings
 
-# Definición
+## Definición
+
 Un string, tambien llamado cadena de texto, es un valor escalar que representa una serie de caracteres.
 
-# Sintaxis
+## Sintaxis
+
 - Este valor puede ser representado entre **comillas dobles**
 
 ```js
@@ -26,7 +28,7 @@ Un string, tambien llamado cadena de texto, es un valor escalar que representa u
     console.log(frase); // "Mi nombre es Ramón"
 ```
 
-# Ejemplos de uso de cadenas de texto
+## Ejemplos de uso de cadenas de texto
 
 ```js
     var nombre = "Leticia"; // Comillas dobles.
@@ -69,13 +71,15 @@ Un string, tambien llamado cadena de texto, es un valor escalar que representa u
     console.log(fraseTres); // Leticia es mayor de edad?: true.
 ```
 
-# A tener en cuenta
+## A tener en cuenta
+
 Los números contenidos en un string ```'1234'``` serán tomados como texto y no como números 👀.
 
-# Propiedades
+## Propiedades
+
 Sólo se mostrarán algunas de las propiedades. El resto se pueden consultar en el diccionario.
 
-- ## **length**
+- ### **length**
 
 Sintaxis: cadenaDeTexto.**lenght**
 
@@ -90,11 +94,13 @@ Devuelve el número de caracteres que componen una cadena, es decir, el **largo*
 
     console.log(´La palabra Javascript tiene ${largo} caracteres.´); // La palabra Javascript tiene 9 caracteres
 ```
-- ## **toUpperCase**
+
+- ### **toUpperCase**
 
 Sintaxis: cadenaDeTexto.**toUpperCase()**
 
 Devuelve la cadena de texto pasada a **mayúsculas**. Esta propiedad no cambia el valor de la cadena de texto, es decir, que devuelve el contenido en mayúsculas pero no lo convierte a mayúsculas.
+
 ```js
     var lenguaje = "JavaScript";
 
@@ -102,11 +108,13 @@ Devuelve la cadena de texto pasada a **mayúsculas**. Esta propiedad no cambia e
 
     console.log(mayusculas); // "JAVASCRIPT"
 ```
-- ## **toLowerCase**
+
+- ### **toLowerCase**
 
 Sintaxis: cadenaDeTexto.**toLowerCase()**
 
 Devuelve la cadena de texto pasada a *minúsculas**. Esta propiedad no cambia el valor de la cadena de texto, es decir, que devuelve el contenido en minúsculas pero no lo convierte a minúsculas.
+
 ```js
     var lenguaje = "JavaScript";
 
@@ -114,7 +122,8 @@ Devuelve la cadena de texto pasada a *minúsculas**. Esta propiedad no cambia el
 
     console.log(minusculas); // "javascript"
 ```
-- ## **charAt**
+
+- ### **charAt**
 
 Sintaxis: cadenaDeTexto.**charAt(índice)**
 

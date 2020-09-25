@@ -1,6 +1,7 @@
-# 
+# Arrays
 
-# Definición
+## Definición
+
 Un array es un objeto con una particular relación entre la clave y la propiedad length. Dicho de otro modo, es una colección de datos cuyo dato va ligado a un índice.
 
 ```js
@@ -13,14 +14,16 @@ En los arrays, junto a los objetos, se pueden almacenar, a diferencia de una var
 
 El índice numérico determina la posición en la que se encuentra un dato siendo ```0``` la posición del primer dato y ```array.length -1``` la posición del último dato.
 
-# Sintaxis
+## Sintaxis
+
 Se escribe entre **corchetes** y los datos se separan por **comas**. El último dato no lleva **coma**.
 
 ```js
     var miArray = [dato1, dato2, dato3, datoN];
 ```
 
-# Qué puede contener?
+## Qué puede contener?
+
 - Strings
 
 ```js
@@ -74,7 +77,8 @@ Se escribe entre **corchetes** y los datos se separan por **comas**. El último 
     ];
 ```
 
-# Acceso a los datos
+## Acceso a los datos
+
 *Para el ejemplo anterior . . .*
 
 - Mediante el índice
@@ -107,7 +111,8 @@ Se escribe entre **corchetes** y los datos se separan por **comas**. El último 
         7 'Adios'
 ```
 
-# Manipular array
+## Manipular array
+
 Sólo se mostrarán algunos de los métodos. El resto se pueden consultar en el diccionario.
 
 Estos métodos implican destrucción, nos devuelven el array modificado y no una copia del mismo modificada. Observa como en el siguiente ejemplo el contenido de la variable ```miArray``` ha sido modificado permanentemente 👀.
@@ -121,9 +126,11 @@ Estos métodos implican destrucción, nos devuelven el array modificado y no una
 
     console.log(miArray); // ['a', 'b', 'c', 'd']
 ```
-- ## **push**
 
-Sintaxis: nombreArray.push(nuevoDato)
+- ### **push**
+
+Sintaxis: nombreArray.push(nuevoDato).
+
 Mediante **push**, se añadirá el dato al final de la lista.
 
 ```js
@@ -134,9 +141,10 @@ Mediante **push**, se añadirá el dato al final de la lista.
     console.log(miArray); // ['a', 'b', 'c', 'd']
 ```
 
-- ## **pop**
+- ### **pop**
 
-Sintaxis: nombreArray.pop()
+Sintaxis: nombreArray.pop().
+
 Mediante **pop**, se eliminará el último dato de la lista.
 
 ```js
@@ -147,9 +155,10 @@ Mediante **pop**, se eliminará el último dato de la lista.
     console.log(miArray); // ['a', 'b', 'c']
 ```
 
-- ## **unshift**
+- ### **unshift**
 
-Sintaxis: nombreArray.unshift(nuevoDato)
+Sintaxis: nombreArray.unshift(nuevoDato).
+
 Mediante **unshift**, se añadirá el dato al principio de la lista.
 
 ```js
@@ -160,9 +169,10 @@ Mediante **unshift**, se añadirá el dato al principio de la lista.
     console.log(miArray); // ['z', 'a', 'b', 'c']
 ```
 
-- ## **shift**
+- ### **shift**
 
-Sintaxis: nombreArray.shift()
+Sintaxis: nombreArray.shift().
+
 Mediante **shift**, se eliminará el primer dato de la lista.
 
 ```js
@@ -173,9 +183,10 @@ Mediante **shift**, se eliminará el primer dato de la lista.
     console.log(miArray); // ['b', 'c']
 ```
 
-- ## **reverse**
+- ### **reverse**
 
-Sintaxis: nombreArray.reverse()
+Sintaxis: nombreArray.reverse().
+
 **reverse** invertirá el orden de los datos de un array.
 
 ```js
@@ -186,9 +197,10 @@ Sintaxis: nombreArray.reverse()
     console.log(miArray); // ['c', 'b', 'a']
 ```
 
-- ## **sort**
+- ### **sort**
 
-Sintaxis: nombreArray.sort()
+Sintaxis: nombreArray.sort().
+
 **sort** ordenará los elementos de un array. Si no se le pasa un función como parámetro que defina el método de ordenamiento, lo ordenará según su posición del dato Unicode. No es un método necesariamente estable.
 
 ```js
@@ -199,9 +211,9 @@ Sintaxis: nombreArray.sort()
     console.log(miArray); // [ 21, 32, 99, 'a', 'b', 'c' ]
 ```
 
-- ## **splice**
+- ### **splice**
 
-Sintaxis: nombreArray.splice(índice)
+Sintaxis: nombreArray.splice(índice).
 
   - Si al método **splice** sólo se le pasa un parámetro, eliminará todos los datos desde el índice indicado hasta el final.
 
@@ -223,7 +235,8 @@ Sintaxis: nombreArray.splice(índice)
     console.log(miArray); // ['a', 'b', 3}
 ```
 
-# Herencia
+## Herencia
+
 Los arrays son *objetos* y también heredan cuando son copiados. Esto lo veremos más profundamente en la **Lección 8**.
 
 ```js
@@ -238,13 +251,18 @@ Los arrays son *objetos* y también heredan cuando son copiados. Esto lo veremos
     console.log(b); // [1, 2, 3, 4]
 ```
 
-# Buscar
+## Buscar
+
 - **indexOf**
 
-Sintaxis: nombreArray.indexOf(dato)
+Sintaxis: nombreArray.indexOf(dato).
+
 **indexOf** recorrerá el array en busca del dato, si lo encuentra devolverá el índice que ocupa.
+
 Si existe más de un dato igual, devolverá el índice del primer hallazgo.
+
 Si no existe devolverá -1.
+
 ```js
     var miArray = ['a', 'b', 'c', 'b'];
 

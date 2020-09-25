@@ -1,6 +1,7 @@
-# 
+# Objetos
 
-# Definición
+## Definición
+
 Un objeto es un contenedor de propiedades (calve/valor) que se almacena en una variable.
 
 Podemos decir que las propiedades de un objeto son en la práctica variables, con la única diferencia que para dirigirnos a ellas, lo hacemos asociado al objeto. Una ayuda para entender los objetos es pensar en ellos como objetos reales. Un coche tiene, por ejemplo, marca, modelo, color, tipo combustible, año fabricación, etc...
@@ -9,7 +10,8 @@ Existen una serie de objetos propios de **JavaScript** que albergan propiedades 
 
 Fuera de estos objetos propios del lenguaje, existe la posibilidad de que nosotros definamos nuestros propios objetos.
 
-# Sintaxis.
+## Sintaxis.
+
 Fíjate en que el último par clave/valor no lleva ```,``` coma.
 
 ```js
@@ -27,7 +29,8 @@ Fíjate en que el último par clave/valor no lleva ```,``` coma.
     };
 ```
 
-# Qué puede contener?
+## Qué puede contener?
+
 Una apropiedad puede ser de cualquier tipo.
 
 - String:
@@ -95,7 +98,8 @@ Una apropiedad puede ser de cualquier tipo.
     console.log(objConbinacion.e(objConbinacion.a)); // 'Hola Hector'
 ```
 
-# Accediendo a los valores
+## Accediendo a los valores
+
 Usaremos el siguiente **objeto** para los ejemplos.
 
 ```js
@@ -172,13 +176,15 @@ Usaremos el siguiente **objeto** para los ejemplos.
     */
 ```
 
-# Construyendo un objeto
+## Construyendo un objeto
+
 Mediante el uso de una función podemos construir un objeto. Como parámetros le pasamos las propiedades. En su interior haremos uso de la palabra reservada ```this``` para igualar la propiedad a un término que por convención será el mismo.
 Ahora es el momento de crear un nuevo objeto mediante el constructor. Esto se hace creando una variable y se iguala a la palabra reservada ```new``` junto al nombre de la función constructora, ahora bien, como parámetros hemos de pasar los valores de las propiedades respetando el orden. Por convención se define a un constructor de objeto con la primer letra en mayúscula.
 
 *Nota*: ```this```es un puntero que hace referencia al propio objeto dentro del método contructor. 
 
 Usaremos esta función como método constructor para los ejemplos.
+
 ```js
     function Mascota(raza, color, vivo, edad) {
         this.raza = raza;
@@ -234,7 +240,8 @@ Usaremos esta función como método constructor para los ejemplos.
     console.log(neus.color); // 'Ceniciento'
 ```
 
-# Herencia
+## Herencia
+
 Un objeto puede ser creado mediante copia de otro objeto. Hay que tener en cuenta que, tanto la copia como el copiado, comparten las mismas direcciones de memoria y si se modifica uno también se modificará el otro. Si queremos que no se propague la herencia, deberemos crear un objeto nuevo.
 
 ```js

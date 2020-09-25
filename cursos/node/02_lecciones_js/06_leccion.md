@@ -1,19 +1,22 @@
-# 
+# Booleanos
 
-# Definición
-Son un tipo de valores primitivos que comportan un conjunto binario y contrapuesto. Suponen en la ciencia de la informática ON/OFF o 1/0, es decir, verdadero o falso.
+## Definición
 
-# Sintaxis
+Son un tipo de valores primitivos que comportan un conjunto binario y contrapuesto. Suponen en la ciencia de la informática ON|OFF ó 1|0, es decir, verdadero o falso.
+
+## Sintaxis
+
 Verdadero
 - ```true```
 
 Falso
 - ```false```
 
-# Uso
+## Uso
+
 En programación, su uso, aunque no exclusivamente, se ciñe a la resolución de comparativas y evaluación del contenido de una variable.
 
-# Cuándo es ```true```?
+## Cuándo es ```true```?
 
 ```js
     var a = Boolean(10.10); // Número decimal.
@@ -29,7 +32,7 @@ En programación, su uso, aunque no exclusivamente, se ciñe a la resolución de
     console.log(a, b, c, d, e, f); // true true true true true true.
 ```
 
-# Cuándo es ```false```?
+## Cuándo es ```false```?
 
 ```js
     var f = Boolean(0); // Número == 0
@@ -48,7 +51,9 @@ En programación, su uso, aunque no exclusivamente, se ciñe a la resolución de
 
     console.log(f, g, h, i, j, k, l); // false false false false false false false.
 ```
-# En comparaciones
+
+## En comparaciones
+
 ```js
     var m = 1 < 10; // Operador menor.
 
