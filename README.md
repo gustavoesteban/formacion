@@ -131,7 +131,7 @@ ansible-playbook -i host.yml playbook_restart_compose.yml
 
 ## GitHub actions
 
-- The repository of this project contains a workflow that updates the repo in the VM for CI
+- The repository of this project contains a workflow that updates the repo in the VM for CD
 
 - You need to add the following secrets to your GitHub account
 
