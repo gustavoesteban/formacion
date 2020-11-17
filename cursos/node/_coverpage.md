@@ -9,7 +9,7 @@
 - JavaScript
 
 [GitHub](https://github.com/gustavoesteban/formacion/tree/master/cursos/node)
-[Plataforma](https://kame.pro)
+[Plataforma](https://kirin.uno)
 [Empezar](#Presentación)
 
 <!--- GB color --->
