@@ -5,6 +5,11 @@
   - [Solución completa (1): os namespaces](./01_que_e_un_contedor_de_software/04_solucion_completa_1.md)
   - [Solución completa (2): os cgroups](./01_que_e_un_contedor_de_software/05_solucion_completa_2.md)
   - [Entón, que é un contedor?](./01_que_e_un_contedor_de_software/06_enton_que_e_un_contedor.md)
+  - [Practica guiada: construindo o noso contedor](./01_que_e_un_contedor_de_software/07_practica_guiada_construindo_o_noso_contedor.md)
+  - [Namespaces en profundidade](./01_que_e_un_contedor_de_software/08_namespaces_en_profundidade.md)
+  - [Cgroups: Xestión e utilidades](./01_que_e_un_contedor_de_software/09_cgroups_xestion_e_utilidades.md)
+  - [Cuestionario](./01_que_e_un_contedor_de_software/10_cuestionario.md)
+  - [📝 Actividades](./05_actividades/01_modulo_1.md)
 
 - Docker
   - [Docker](./02_docker/01_docker.md)
@@ -16,6 +21,7 @@
   - [Xestión da rede](./02_docker/07_xestion_da_rede.md)
   - [Paso de argumentos ó contedor](./02_docker/08_paso_de-argumentos_o_contedor.md)
   - [Xestión de volumes](./02_docker/09_xestion_de_volumes.md)
+  - [📝 Actividades](./05_actividades/02_modulo_2.md)
 
 - Xestión de imaxes e contedore
   - [Objectivos](./03_xestion_de_imaxes_e_contedores/01_obxectivos.md)
@@ -39,7 +45,3 @@
   - [O Docker-Compose: fundamentos](./04_aplicacions_e_servizos_multicontedor/06_o_docker-compose_fundamentos.md)
   - [Ciclo de vida dunha aplicación de compose](./04_aplicacions_e_servizos_multicontedor/07_cilo_de_vida_dunha_aplicacion_de_compose.md)
   - [Práctica guiada: Nesquik vs ColaCao](./04_aplicacions_e_servizos_multicontedor/08_practica_guiada_nesquik_vs_colacao.md)
-
-- Actividades
-  - [Módulo 1](./05_actividades/01_modulo_1.md)
-  - [Módulo 2](./05_actividades/02_modulo_2.md)

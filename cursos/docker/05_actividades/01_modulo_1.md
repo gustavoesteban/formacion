@@ -132,3 +132,55 @@ done
 - Paso 4 (8 puntos máximos)
  - **4 puntos** se o grupo de control de cpu está correctamente creado e a limitación de cpu shares establecida de xeito adecuado.
  - **4 puntos** se hai tres instancias lanzadas do script de test e as limitacións no top aparecen correctamente.
+
+## Crear os primeiros contedores de software
+
+> Montando un contedor - Empregando [as tecnoloxías que vimos nesta tema (unshare, mount...)](../01_que_e_un_contedor_de_software/08_namespaces_en_profundidade.md) vamos a crear un contedor de software de xeito "artesanal"
+
+O contedor ten que reunir as seguintes características:
+
+**Especificacións**.
+
+- O contedor ten que montar este [sistema de ficheiros](https://github.com/ericchiang/containers-from-scratch/releases/download/v0.1.0/rootfs.tar.gz).
+
+- Ten que estás illado nos seguintes [namespaces](../01_que_e_un_contedor_de_software/08_namespaces_en_profundidade.md): (pids, mounts, UTS, network, ipc)
+
+- Ten que ter montado un /proc propio
+
+**Pasos**:
+
+1 Revisar o aprendido sobre contedores.
+
+- Nun pdf, mostra as captura de pantalla de todo o necesario para:
+ - Crear un contedor segundo as especificacións establecidas.
+ - Como probar que o UTS está realmente illado?
+ - Como podemos saber cal é o proceso init do contedor?
+ - Como lle daríamos conectividade ó exterior ó contedor?  Pista ([veth](http://man7.org/linux/man-pages/man4/veth.4.html)).
+ - Sabendo o que son os [cgroups](../01_que_e_un_contedor_de_software/09_cgroups_xestion_e_utilidades.md), limita a memoria do contedor a ```512 MB```.
+
+---
+
+**Evidencias da adquición dos desempeños**: Pasos 1 correctamente realizado segundo estes...
+
+**Indicadores de logro**: O teu contedor deberá...
+
+- Estar aillado nos namespaces establecidos.
+- Poderá comprobarse que ten o seu propio UTS.
+- Poderá saberse cal é o seu proceso init.
+- Terá conectividade co exterior. 
+- Estará limitada a súa memoria a 512 MB mediante cgroups. 
+
+**Autoavaliación**: Revisa e autoavalia o teu traballo aplicando os indicadores de logro.
+
+**Criterios de corrección** / **niveis de logro dos desempeños**:
+
+- Paso 1 (máximo de **40 puntos**)
+ - **10 puntos** se o contedor está arrincado cos seus namespaces propios.
+ - **5 puntos** se a comprobación do UTS é correcta.
+ - **5 puntos** se a comprobación do proceso init é correcta. 
+ - **10 puntos** se o contedor ten conectividade co exterior.
+ - **10 puntos** se o contedor está nun cgroup que o limita a 512 MB de memoria.
+
+**Peso na cualificación**:
+
+- Peso desta tarefa no seu tema ...................................................... 40 %

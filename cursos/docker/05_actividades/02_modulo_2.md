@@ -1,55 +1,85 @@
-# Limitar e controlar procesos a través dos cgroups
+# Módulo 2: Docker, contedores para todos
 
-Os cgroups son unha das funcionalidades básicas para a creación e xestión de contedores de software. Introducidos no Kernel de Linux polos enxeñeiros de Google a finales do 2007, permiten crear xerarquías de control, xestión e monitorización de procesos aplicables a usuarios e programas individuais. A súa flexibilidade e potencia fan que sexan empregados por outras ferramentas básicas de sistemas tales como systemd.  
+## Docker básico. Instalar docker no noso entorno de probas e operar cos primeiros contedores
 
-Antes de realizar a tarefa le atentamente as instrucións, os indicadores de logro e os criterios de corrección que de seguido se detallan.
+> Antes de comezar a traballar co ecosistema de Docker, temos que instalar docker engine no noso entorno de traballo.
 
-Pasos:
+### Tipos de instalación
 
-Consultar e analizar a documentación sobre  cgroups: grupos de control de procesos.
-Traballar cos comandos de xestión de cgroups:
-Como script de test podes empregar este. 
-Nun pdf pon as capturas de pantalla dos comandos necesarios para:
-Crear un grupo de control de memoria co nome grupotest.
-Limitar a execución de memoria a 50MB
-Introducir unha execución do script de probas no grupo de control grupotest.
-Ver o consumo de memoria do script a través de cgroups. 
- Limitar a execución de memoria a 4KB. 
-Mostrar os logs do sistema cando se corre o script de test con esta limitación. Pista:  /var/log/messages
-Explorar o control de cpu nos cgroups.
-Hai unha información excelente nesta documentación.
-Para testear unha aplicación de uso extensivo de cpu, recoméndase matho-primes:
-Baixar o paquete https://launchpad.net/ubuntu/+source/mathomatic/16.0.5-1.
-Descomprimir. 
-Ir á carpeta primes/
-Executar make && make install
-Executando 
-/usr/local/bin/matho-primes 0 9999999999 > /dev/null &
-temos unha tarefa de uso intensivo de cpu que podemos cancelar sen problema en calqueira momento. 
+Actualmente existen duas versións de Docker, unha gratuita para a comunidade (Community Edition) e unha de pago, con soporte extendido, para empresas (Enterprise Edition).
 
-Nun pdf, mostrar as sentencias necesarias para:
-Crear un grupo de control de emprego de cpu. 
-Introducir limitacións de cpu_shares.
-Establecer unha ratio de limitación de 2:1
-Lanzar 3 instancias do programa de test e mostrar co top as limitación de cpu. 
-Evidencias de adquición de desempeños: Pasos 1 ao 4 correctamente realizados segundo estes...
+Dentro da versión de comunidade, que sería a de empregar neste curso, temos varias opcións:
 
-Indicadores de logro:  
+- A: Instalación de Docker no noso laptop.
+- B: Creación dunha máquina virtual (servidor linux) e instalar o Docker dentro dela.
 
-O cuestionario se contesta.
-Nos pdfs a entregar:
-figuran os comandos necesarios para crear os cgroups coas limitacións de memoria e os scripts correndo dentro dos grupos. 
-vense os comandos de bash de creación de cpu-shares nos cgroups e testeos dos comandos.
-Autoavaliación: Revisa e autoavalia o teu traballo aplicando os indicadores de logro.
+#### A - Instalación de Docker no noso laptop
+A plataforma de Docker permite a súa instalación nos principais sistemas operativos:
 
-Criterios de corrección / niveis de logro dos desempeños:
+- [Windows](https://docs.docker.com/docker-for-windows/install/).
+- [Mac](https://docs.docker.com/docker-for-mac/install/).
+- Linux (ver a continuación o apartado B).
 
-Paso 2
-5 puntos se o cuestionario está completado
-Paso 3  (12 puntos máximos)
-4 puntos se o grupo de memoria está correctamente creado e a limitación establecida a 50MB.
-4 puntos se o script está correctamente introducido no grupo e se comproba correctamente a limitación efectiva de memoria. 
-4 puntos se se limita a memoria a 4KB e se mostra nos logs o que ocorre ó executar o script. 
-Paso 4 (8 puntos máximos)
-4 puntos se o grupo de control de cpu está correctamente creado e a limitación de cpu shares establecida de xeito adecuado.
-4 puntos se hai tres instancias lanzadas do script de test e as limitacións no top aparecen correctamente. 
+#### B - Instalación de Docker nun servidor linux
+
+Segundo a distro da nosa elección, temos distintas [posibilidades](https://docs.docker.com/engine/installation/#server). Se estades a empregar a imaxe recomendada no modulo 0, de preparación do entorno (Ubuntu 18.04) tedes as instruccións [aquí](https://docs.docker.com/install/linux/docker-ce/ubuntu/).
+
+**Pasos**:
+
+1. **Instalar** docker no noso entorno de traballo seguindo uns dos camiños anteriores (A ou B).
+
+2. Unha vez instalado o Docker vamos a levantar o noso primeiro contedor. Para esto temos que levantar un proceso que, empregando a comando de shell [```echo```](http://www.linfo.org/echo.html), saque unha mensaxe por pantalla dicindo: Ola Mundo!
+
+Obviamente, queremos facelo dentro dun contedor, e que monte **unha distro CentOS**.
+
+Tal e como viramos na práctica do módulo 1 (construindo o noso contedor) poderíamos seguir eses pasos para face-lo traballo:
+
+- Descargar un sistema de ficheiros de CentOS.
+- Montar un contedor con unshare, limitando os [namespaces](../01_que_e_un_contedor_de_software/08_namespaces_en_profundidade.md), facer un chroot a onde está o sistema de ficheiros descargado...
+- ...
+
+pero agora xa podemos empregar Docker para facelo. Con Docker, básicamente, temos que seguir a mesma receta, pero, afortunadamente, todo iso está automatizado dentro das súas [utilidades](https://docs.docker.com/engine/reference/commandline/run/).
+
+3. A continuación vexamos como **aloxar un servidor dentro dun contedor**, e ademáis **que teña persistencia**, de xeito que si eliminamos e volvemos a recrear o contedor non se perderán os datos que nel se almacenan.
+
+Para esto  montar un contedor que:
+
+- 3.1: conteña un **servidor mysql**, empregando a imaxen oficial de [mysql](https://hub.docker.com/_/mysql), **na súa versión 5.7**.
+- 3.2: se arrinque **en segundo plano** e continue ca execución do servicio unha vez desenganchado do terminal.
+- 3.3: que teña  **persistencia de datos**, dentro do path de almacenado de mysql (```/var/lib/mysql```).
+- 3.4: ademáis **seguindo as instruccións indicadas** no [repositorio da imaxen](https://hub.docker.com/_/mysql):
+ - establecer a contrasinal de root a unha cadea de 10 caracteres.
+ - crear unha base de datos co nome "platega-docker".
+ - crear un usuario para esa base de datos co nome de pila do alumno e unha contrasinal de 10 caracteres.
+
+4. Ademais de que teña persistencia, tamén queremos que teña conectividade co exterior, de xeito que se poida acceder dende fora da máquina virtual a ese contedor. Para isto relancemos o servidor de mysql do apartado anterior pero expoñendo o **porto 3306**, na interfaz pública do entorno de traballo (a máquina virtual de virtualbox, se é o caso).
+
+- 4.1: Deter o contedor e crear un novo que traballe contra os mesmos datos.
+- 4.2: Mostra-los pasos necesarios para dar ó contedor conectividade co exterior.
+- 4.3: Comprobar que se pode facer login no mysql do contedor con root e co usuario normal **dende o anfitrión**, por exemplo empregando o [Mysql Workbench](https://dev.mysql.com/downloads/workbench/), ou o cli de mysql.
+- 4.4: Mostrar cómo se faría un backup (ferramenta mysqldump), **introducindo o proceso** no mesmo contedor do servidor mysql, pero redirixindo a saída a un ficheiro no anfitrión.
+
+---
+
+**Evidencias de adquición de desempeños**: Pasos 1 ao 4 correctamente realizados segundo estes...
+
+**Indicadores de logro**:  
+
+- Entregar un documento* cas capturas de pantalla que mostren:
+ - 1. Os pasos seguidos para levar a cabo a instalación de docker escollida no entorno  de traballo.
+ - 2. O comando docker executado para obter a saída  "Ola Mundo!".
+ - 3. Os comandos escollidos para crear un servidor de mysql 5.7 dentro dun docker cunha base de datos que reúna tódolos requisitos indicados.
+ - 4. Os comandos necesarios crear un novo contedor de mysql,  dar conectividade co exterior ao servizo de mysql, e facer un backup da base de datos co ```mysqldump```.
+
+\**Nota - Se o preferides, podedes entregar un screencast da consola, con ```asciinema.org```.
+
+**Autoavaliación**: Revisa e autoavalia o teu traballo aplicando os indicadores de logro.
+
+**Criterios de corrección**:
+
+- Realizar a instalación correctamente, do docker engine no entorno de traballo (**4 puntos**).
+- Executar o primeiro contedor de "Ola Mundo!" (**4 puntos**).
+- Lanzar o contedor de mysql cas características indicadas (**16 puntos**).
+ - A razón de **4 puntos** por cada apartado indicado correctamente.
+- Agregarlle conectividade co exterior ao servizo de mysql e facer as comprobacións (**16 puntos**).
+ - A razón de **4 puntos** por cada apartado indicado correctamente.
