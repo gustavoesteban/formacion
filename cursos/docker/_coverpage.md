@@ -1,4 +1,4 @@
-![logo](https://i.pinimg.com/originals/f5/5e/80/f55e8059ea945abfd6804b887dd4a0af.gif)
+![logo](_media/icon.png)
 
 # Docker <small>🚢</small>
 
