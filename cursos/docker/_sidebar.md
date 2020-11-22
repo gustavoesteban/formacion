@@ -23,7 +23,7 @@
   - [Xestión de volumes](./02_docker/09_xestion_de_volumes.md)
   - [📝 Actividades](./05_actividades/02_modulo_2.md)
 
-- Xestión de imaxes e contedore
+- Xestión de imaxes e contedores
   - [Objectivos](./03_xestion_de_imaxes_e_contedores/01_obxectivos.md)
   - [Que é unha imaxe?](./03_xestion_de_imaxes_e_contedores/02_que_e_unha_imaxe.md)
   - [Exemplo de imaxe](./03_xestion_de_imaxes_e_contedores/03_exemplo_de_imaxe.md)
@@ -35,6 +35,7 @@
   - [Comandos de xestión básica das imaxes](./03_xestion_de_imaxes_e_contedores/09_comandos_de_xestion_basica_das_imaxes.md)
   - [Repositorio privado de imaxes: o Docker registry](./03_xestion_de_imaxes_e_contedores/10_repositorio_privado_de_imaxes_o_docker_registry.md)
   - [Cuestionario final](./03_xestion_de_imaxes_e_contedores/11_cuestironario_final.md)
+  - [📝 Actividades](./05_actividades/03_modulo_3.md)
 
 - Aplicacións e servizos multi-contedor
   - [Introdución](./04_aplicacions_e_servizos_multicontedor/01_introducion.md)
