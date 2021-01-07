@@ -1,1 +1,0 @@
-# Observabilidad en la arquitectura

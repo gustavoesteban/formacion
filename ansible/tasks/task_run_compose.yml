@@ -1,8 +1,0 @@
----
-
-- name: Run compose
-  command: docker-compose up -d
-  args:
-    chdir: ~/{{ repo_name }}
-
-...

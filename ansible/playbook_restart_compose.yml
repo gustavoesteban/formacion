@@ -1,7 +1,0 @@
----
-
-    - import_playbook: ./plays/play_clone_repo.yml
-    - import_playbook: ./plays/play_env.yml
-    - import_playbook: ./plays/play_restart_compose.yml
-
-...
