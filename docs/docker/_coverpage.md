@@ -8,8 +8,8 @@
 - Xestión de imáxenes
 - Aislamento de recursos
 
-[GitHub](https://github.com/gustavoesteban/formacion/tree/master/cursos/docker)
-[Plataforma](https://kirin.uno)
+[GitHub](https://github.com/gustavoesteban/formacion/tree/formacion/cursos/docker)
+[Plataforma](https://gustavoesteban.github.io/formacion/)
 [Empezar](#Introducción)
 
 <!--- GB color --->
