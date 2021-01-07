@@ -9,8 +9,8 @@
 - ENTRYPOINT
 - **...**
 
-[GitHub](https://github.com/gustavoesteban/formacion/tree/master/cursos/docker-images)
-[Plataforma](https://kirin.uno)
+[GitHub](https://github.com/gustavoesteban/formacion/tree/formacion/cursos/docker-images)
+[Plataforma](https://gustavoesteban.github.io/formacion/)
 [Empezar](#Introducción)
 
 <!--- GB color --->
