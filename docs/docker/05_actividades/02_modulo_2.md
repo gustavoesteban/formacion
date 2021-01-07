@@ -130,11 +130,11 @@ docker restart <nome_container_php>
 3.2: ¿Como poderíamos comprobar o funcionamento do código ca versión 5.6 de php? ¿e ca última versión 7.3? ¿Podemos ter as 3 versións da aplicación  funcionando á vez, cada unha no seu porto (8080,8081,8082)?
 ¿Como limitaríamos o consumo de recursos no anfitrión (50 MB de memoria, 50% dunha cpu) para os 3 contedores cas diferentes versións da aplicación?
 
-4. Agora vamos a **probar a aplicación** de [portainer](https://formacion.4eixos.com/tema_2_web_addenda_portainer/) e ver os containers correndo na máquina virtual, de maneira gráfica dende un navegador.
+4. Agora vamos a **probar a aplicación** de [portainer](https://gustavoesteban.github.io/formacion/docker/#/./02_docker/10_portainer) e ver os containers correndo na máquina virtual, de maneira gráfica dende un navegador.
 
-4.1 Para isto seguir os pasos indicados nos [contidos](https://formacion.4eixos.com/tema_2_web_addenda_portainer/) do curso.
+4.1 Para isto seguir os pasos indicados nos [contidos](https://gustavoesteban.github.io/formacion/docker/#/./02_docker/10_portainer) do curso.
 
-4.2 Apagar todos os contedores dende [portainer](https://formacion.4eixos.com/tema_2_web_addenda_portainer/). Antes de esto descargar unha copia sql da base de datos, dende o phpmyadmin.
+4.2 Apagar todos os contedores dende [portainer](https://gustavoesteban.github.io/formacion/docker/#/./02_docker/10_portainer). Antes de esto descargar unha copia sql da base de datos, dende o phpmyadmin.
 
 **Evidencias de adquición de desempeños**: Pasos 1 ao 4 correctamente realizados segundo estes...
 
@@ -150,7 +150,7 @@ Se vos resulta máis sinxelo podedes remitirnos o repositorio de código de gith
  - Lanzar a aplicación php desenvolta, conectada co contedor mysql do exercicio anterior.
  - Lanzar novas versións da aplicación php desenvolta, cas versión 5.6 e 7.3 de php.
    * Limitadas a consumir 50MB de RAM e o 50% de 1 cpu
- - Lanzar o contedor de [portainer](https://formacion.4eixos.com/tema_2_web_addenda_portainer/) e listar todos os contedores executándose na maquina docker
+ - Lanzar o contedor de [portainer](https://gustavoesteban.github.io/formacion/docker/#/./02_docker/10_portainer) e listar todos os contedores executándose na maquina docker
 
 Se vos resulta máis sinxelo podedes remitirnos os json de [asciinema](https://asciinema.org/) con estos comandos.
 
