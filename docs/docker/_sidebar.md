@@ -19,8 +19,9 @@
   - [Comandos básicos](./02_docker/05_comandos_basicos.md)
   - [Comando _run_ avanzado](./02_docker/06_comando_run_avanzado.md)
   - [Xestión da rede](./02_docker/07_xestion_da_rede.md)
-  - [Paso de argumentos ó contedor](./02_docker/08_paso_de-argumentos_o_contedor.md)
+  - [Paso de argumentos ó contedor](./02_docker/08_paso_de_argumentos_o_contedor.md)
   - [Xestión de volumes](./02_docker/09_xestion_de_volumes.md)
+  - [Portainer](./02_docker/10_portainer.md)
   - [📝 Actividades](./05_actividades/02_modulo_2.md)
 
 - Xestión de imaxes e contedores

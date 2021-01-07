@@ -2,7 +2,7 @@
 
 ## Comprender e empregar a tecnoloxía de namespaces
 
-> Os [namespaces](https://docker.kirin.uno/addenda) son un dos pilares básicos para a construcción de contedores, a posibilidade de crear "vistas" privadas so SO para un proceso ou conxunto de procesos aporta unha flexibilidade moi grande para a execución de procesos.
+> Os [namespaces](https://gustavoesteban.github.io/formacion/docker/#/01_que_e_un_contedor_de_software/08_namespaces_en_profundidade) son un dos pilares básicos para a construcción de contedores, a posibilidade de crear "vistas" privadas so SO para un proceso ou conxunto de procesos aporta unha flexibilidade moi grande para a execución de procesos.
 
 Antes de realizar a tarefa le atentamente as **instrucións**, os **indicadores de logro** e os **criterios de corrección** que de seguido se detallan.
 
