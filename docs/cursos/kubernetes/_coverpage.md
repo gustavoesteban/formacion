@@ -1,12 +1,12 @@
 ![logo](_media/icon.png)
 
-# Docker <small>🚢</small>
+# Kubrnetes <small>🕸️</small>
 
-> Complete container solution
+> Production-Grade Container Orchestration
 
-- Encapsulación
-- Xestión de imáxenes
-- Aislamento de recursos
+- Escalado
+- Despregue automático
+' Xestión de apps contenerizadas
 
 [GitHub](https://github.com/gustavoesteban/formacion/tree/formacion/cursos/docker)
 [Plataforma](https://gustavoesteban.github.io/formacion/)
@@ -28,4 +28,4 @@
 <!--- ![color](#6C5B7B) #purple --->
 <!--- ![color](#584848) #brown --->
 
-![color](#51cef5)
+![color](#BFD1E5)
