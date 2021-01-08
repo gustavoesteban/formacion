@@ -90,7 +90,7 @@ done
 ```
 
 3. **Explorar** o control de cpu nos cgroups.
-- Hai unha información excelente nesta documentación.
+- Hai unha información excelente nesta [documentación](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/resource_management_guide/sec-cpu).
 - Para testear unha aplicación de uso extensivo de cpu, recoméndase matho-primes:
  - Baixar o paquete https://launchpad.net/ubuntu/+source/mathomatic/16.0.5-1.
  - Descomprimir. 
