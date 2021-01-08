@@ -1,12 +1,12 @@
 ![logo](_media/icon.png)
 
-# Kubrnetes <small>🕸️</small>
+# <small>k8s</small> Kubernetes <small>🕸</small>
 
 > Production-Grade Container Orchestration
 
 - Escalado
 - Despregue automático
-' Xestión de apps contenerizadas
+- Xestión de apps contenerizadas
 
 [GitHub](https://github.com/gustavoesteban/formacion/tree/formacion/cursos/docker)
 [Plataforma](https://gustavoesteban.github.io/formacion/)
