@@ -66,7 +66,7 @@ A flexibilidade que permiten é moi grande. Pódense crear distintos grupos de l
 > Vamos a revisar unha serie de ferramentas e tecnoloxías que xurdiron ao longo dos anos en diferentes sistemas operativos, para dar resposta ao problema que se plantexaba no módulo 1 sobre a xestión de recursos dentro dun SO.
 
 ---
-## **Xaulas chroot (1979)**
+### **Xaulas chroot (1979)**
 
 ![chroot](./../_media/02_docker/chroot.png)
 
@@ -108,7 +108,7 @@ for i in {lib,lib64}; do sudo umount chroot/$i ; done
 
 ---
 
-## **FreeBSD Jails (2000), Solaris Zones (2004)**
+### **FreeBSD Jails (2000), Solaris Zones (2004)**
 
 ![Evil Jail](./../_media/02_docker/evil_jail.png)
 ![Solaris](./../_media/02_docker/solaris.png)
@@ -121,7 +121,7 @@ Oracle agregou unha característica similar a Solaris, que combina o control de 
 
 ---
 
-## **OpenVZ (2005)**
+### **OpenVZ (2005)**
 
 ![OpenVZ](./../_media/02_docker/opevz.png)
 
@@ -131,7 +131,7 @@ O código de OpenVZ, aínda que está aberto, nunca formou parte da distribució
 
 ---
 
-## **linuxcontainers (2008) e Docker (2013)**
+### **linuxcontainers (2008) e Docker (2013)**
 
 ![LinuxContanirs](./../_media/02_docker/linuxcontainers.png)
 ![Docker](./../_media/02_docker/docker_logo.png)
