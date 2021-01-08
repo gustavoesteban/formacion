@@ -1,6 +1,8 @@
 # Orixes dos contedores de software
 
-Vamos a revisar unha serie de ferramentas e tecnoloxías que xurdiron ao longo dos anos en diferentes sistemas operativos, para dar resposta ao problema que se plantexaba no módulo 1 sobre a xestión de recursos dentro dun SO.
+> Vamos a revisar unha serie de ferramentas e tecnoloxías que xurdiron ao longo dos anos en diferentes sistemas operativos, para dar resposta ao problema que se plantexaba no módulo 1 sobre a xestión de recursos dentro dun SO.
+
+---
 
 ## **Xaulas chroot (1979)**
 
@@ -42,6 +44,8 @@ mkdir /probando
 for i in {lib,lib64}; do sudo umount chroot/$i ; done
 ```
 
+---
+
 ## **FreeBSD Jails (2000), Solaris Zones (2004)**
 
 ![Evil Jail](./../_media/02_docker/evil_jail.png)
@@ -53,6 +57,8 @@ As xaulas de FreeBSD permiten a un administrador, particionar un sistema FreeBSD
 
 Oracle agregou unha característica similar a Solaris, que combina o control de recursos que pode consumir un proceso, ca separación en zonas dos procesos que se executan na máquina.
 
+---
+
 ## **OpenVZ (2005)**
 
 ![OpenVZ](./../_media/02_docker/opevz.png)
@@ -60,6 +66,8 @@ Oracle agregou unha característica similar a Solaris, que combina o control de 
 Un ano máis tarde, a compañía Virtuozzo creou un novo sistema de virtualización basado en contedores, sobre o kernel de Linux, que permitía crear multiples contedores illados e seguros, nunha mesma máquina, como se dun servidor privado virtual se tratara.
 
 O código de OpenVZ, aínda que está aberto, nunca formou parte da distribución oficial do kernel de Linux e se incorpora como unha serie de parches extra que se aplican sobre o código do kernel.
+
+---
 
 ## **linuxcontainers (2008) e Docker (2013)**
 
