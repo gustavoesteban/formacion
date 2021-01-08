@@ -22,7 +22,7 @@ O namespace de redes permite, entre outras cousas, conectar procesos que se atop
 - Crear un par de interfaces virtuais. 
 - Asignar unha das interfaces ó namespace privado. 
 - Comunicarse a través das veth (un ping por exemplo)
-- Pódese atopar axuda neste artigo.  
+- Pódese atopar axuda neste [artigo](https://blog.scottlowe.org/2013/09/04/introducing-linux-network-namespaces/).  
 
 ---
 
