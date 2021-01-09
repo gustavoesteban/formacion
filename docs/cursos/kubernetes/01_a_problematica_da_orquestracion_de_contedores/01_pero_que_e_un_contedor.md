@@ -4,7 +4,7 @@
 
 Dentro do mundo Linux que é co tipo de contedores cos que vamos a traballar, un contedor está baseado nas tecnoloxías de namespaces e cgroups, as cais permiten  "separar" os procesos que corren dentro do contedor, do resto do sistema.
 
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/contedor.png)
+![Container](./../_media/01/contedor.png)
 
 A medio camiño entre o chroot e as solucións del virtualización completas (KVM, VirtualBox, VMWare, Xen) o contedor no incurre no custo de virtualizar o hardware ou o kernel do SO ofrecendo, así e todo, un nivel de control e illamento moi superior ao do chroot.
 
@@ -15,7 +15,7 @@ Os contedores de software consisten nunha técnica de virtualización a nivel de
 
 A idea é sinxela, dado que o SO é, dende o punto de vista do proceso, un conxunto de recursos, podemos ofrecerlle unha vista "privada" ou virtual desos recursos.
 
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/contedor1.png)
+![Container](./../_media/01/contedor1.png)
 
 A virtualización desos recursos globais de tal forma que, desde o punto de vista do proceso, sexan privados para él, **é no que consiste un contedor**.
 
@@ -32,7 +32,7 @@ A costa de:
 
 Ademais, non é alternativa a técnica de virtualización de plataforma: ao contrario, é **totalmente compatible**. Precisamente, é como se está a empregar en moitos sitios:
 
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/contedor2.png)
+![Container](./../_media/01/contedor2.png)
 
 **Σ Webgrafía**
 - Kerrisk Michael, "**Namespaces in operation, part 1: namespaces overview**" [en liña]. Dispoñible: [enlace](https://lwn.net/Articles/531114/) [Consulta: 06-Xaneiro-2019]
@@ -60,7 +60,7 @@ Os cgroups pódense ver como unha árbore en que os procesos están pendurados d
 
 A flexibilidade que permiten é moi grande. Pódense crear distintos grupos de limitacións e control e asignar un proceso, e os seus fillos, a distintos grupos, facendo combinacións que permiten un grao moi alto de personalización.
 
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/contedor3.png)
+![Container](./../_media/01/contedor3.png)
 ## Evolución das tecnoloxías de contedores
 
 > Vamos a revisar unha serie de ferramentas e tecnoloxías que xurdiron ao longo dos anos en diferentes sistemas operativos, para dar resposta ao problema que se plantexaba no módulo 1 sobre a xestión de recursos dentro dun SO.
@@ -68,7 +68,7 @@ A flexibilidade que permiten é moi grande. Pódense crear distintos grupos de l
 ---
 ### **Xaulas chroot (1979)**
 
-![chroot](./../_media/01_a_problematica_da_orquestracion_de_contedores/chroot.png)
+![chroot](./../_media/01/chroot.png)
 
 No desenrolo do sistema Unix V7, agregouse unha nova chamada de sistema (chroot) que permitía cambiar o directorio raíz dun proceso, e os seus descendentes, a unha nova localización do sistema de ficheiros.
 
@@ -110,8 +110,8 @@ for i in {lib,lib64}; do sudo umount chroot/$i ; done
 
 ### **FreeBSD Jails (2000), Solaris Zones (2004)**
 
-![Evil Jail](./../_media/01_a_problematica_da_orquestracion_de_contedores/evil_jail.png)
-![Solaris](./../_media/01_a_problematica_da_orquestracion_de_contedores/solaris.png)
+![Evil Jail](./../_media/01/evil_jail.png)
+![Solaris](./../_media/01/solaris.png)
 
 Duas décadas despois, un proveedor de hosting sacou un servizo sobre xaulas BSD para lograr unha separación de recursos clara entre os seus servizos e os dos seus clientes, e deste xeito mellorar a seguridade e facilitar a administración dos mesmos.
 
@@ -123,7 +123,7 @@ Oracle agregou unha característica similar a Solaris, que combina o control de 
 
 ### **OpenVZ (2005)**
 
-![OpenVZ](./../_media/01_a_problematica_da_orquestracion_de_contedores/opevz.png)
+![OpenVZ](./../_media/01/opevz.png)
 
 Un ano máis tarde, a compañía Virtuozzo creou un novo sistema de virtualización basado en contedores, sobre o kernel de Linux, que permitía crear multiples contedores illados e seguros, nunha mesma máquina, como se dun servidor privado virtual se tratara.
 
@@ -133,8 +133,8 @@ O código de OpenVZ, aínda que está aberto, nunca formou parte da distribució
 
 ### **linuxcontainers (2008) e Docker (2013)**
 
-![LinuxContanirs](./../_media/01_a_problematica_da_orquestracion_de_contedores/linuxcontainers.png)
-![Docker](./../_media/01_a_problematica_da_orquestracion_de_contedores/docker_logo.png)
+![LinuxContanirs](./../_media/01/linuxcontainers.png)
+![Docker](./../_media/01/docker_logo.png)
 
 A primeira ferramenta de contedores de software que encontrou ampla acollida dentro da comunidade de Linux foi [LXC](https://linuxcontainers.org/), principalmente polas tecnoloxías que aglutinaba e que foron introducidas dentro do kernel de linux (**Namespaces e cgroups**).
 

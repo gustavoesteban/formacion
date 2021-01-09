@@ -62,7 +62,7 @@ A pesar da competencia que existía no seu día entre os diferentes proveedores 
 
 > Docker Engine, o core de docker, e o compoñente fundamental da plataforma e se compón dunha serie de elementos:
 
-![Docker](./../_media/01_a_problematica_da_orquestracion_de_contedores/engine.png)
+![Docker](./../_media/01/engine.png)
 
 Como podemos ver, existen tres compoñentes básicas:
 
@@ -89,7 +89,7 @@ Esto implica que, actualmente, a baixo nivel, o demonio de docker emprega varios
 
 Estos proxectos constituintes están dispoñibles  para a comunidade, como software libre, e moitos deles incluso xa non pertencen directamente a organización Docker Inc, senón que foron donados a fundacións e grupos alternativos (CNCF, OCI da Linux Fundation ...) , de xeito que garanticen a súa independencia, e así as grandes empresas, e  os grandes actores de cloud na actualidade, como Microsoft ou Google, lles xere confianza para seguir apostando por estas ferramentas para a construcción dos seus propios servizos, e deste xeito, dediquen recursos propios a manter a comunidade.
 
-![Docker](./../_media/01_a_problematica_da_orquestracion_de_contedores/engine1.png)
+![Docker](./../_media/01/engine1.png)
 
 *Imaxe cortesía do blogue de [docker](https://i0.wp.com/blog.docker.com/wp-content/uploads/974cd631-b57e-470e-a944-78530aaa1a23-1.jpg?resize=906%2C470&ssl=1).*
 
@@ -118,7 +118,7 @@ Para este exemplo, imos elixir unha [Debian Jessie](https://www.debian.org/relea
 
 A nosa imaxe tería esta estrutura: 
 
-![Capa](./../_media/01_a_problematica_da_orquestracion_de_contedores/capa_1.png)
+![Capa](./../_media/01/capa_1.png)
 
 ## 2ª Capa: As dependencias do Apache2
 
@@ -126,7 +126,7 @@ Neste exemplo, a versión de Apache a montar é a [2.2](https://httpd.apache.org
 
 Estas dependencias, constituirían unha segunda capa na nosa imaxe: 
 
-![Capa](./../_media/01_a_problematica_da_orquestracion_de_contedores/capa_2.png)
+![Capa](./../_media/01/capa_2.png)
 
 ## 3ª Capa: O servidor Apache
 
@@ -134,11 +134,11 @@ Por último, imos agregar a capa co noso servidor web.
 
 A imaxe, por fin, quedaría da seguinte forma:
 
-![Capa](./../_media/01_a_problematica_da_orquestracion_de_contedores/capa_3.png)
+![Capa](./../_media/01/capa_3.png)
 
 E listo! Agora xa podemos empregar a imaxe para lanzar containers con **versións específicas** de software e cunha base **Debian** sen preocuparnos do resto de software que poida estar a correr no anfitrión. 
 
-![Capas](./../_media/01_a_problematica_da_orquestracion_de_contedores/capa_total.png)
+![Capas](./../_media/01/capa_total.png)
 
 # Imaxe e contedor
 
@@ -157,19 +157,19 @@ O "truco" é concetualmente sinxelo: Docker non corre o noso container directame
 
 Partamos dun container correndo e baseado nunha imaxe:
 
-![Container imaxe](./../_media/01_a_problematica_da_orquestracion_de_contedores/imaxe_e_contedor_1.png)
+![Container imaxe](./../_media/01/imaxe_e_contedor_1.png)
 
 Realmente, a imaxe está formada polas capas propias da imaxe e por unha capa de container. Tan só a capa de container é de **ESCRITURA/LECTURA**.
 
-![Container imaxe](./../_media/01_a_problematica_da_orquestracion_de_contedores/imaxe_e_contedor_2.png)
+![Container imaxe](./../_media/01/imaxe_e_contedor_2.png)
 
 Deste xeito, os programas correndo no container poden escribir no sistema de ficheiros de xeito natural sen ser conscientes de que, realmente, están a escribir nunha capa asociada ó container e non na imaxe que é inmutable. 
 
-![Container imaxe](./../_media/01_a_problematica_da_orquestracion_de_contedores/imaxe_e_contedor_3.png)
+![Container imaxe](./../_media/01/imaxe_e_contedor_3.png)
 
 Isto posibilita que, cada container, poida face-las súas modificacións no sistema de ficheiros sen afectar a outros containers que estén baseados na mesma imaxe, dado que, **cada container ten asociada unha capa de container específica para él**. 
 
-![Container imaxe](./../_media/01_a_problematica_da_orquestracion_de_contedores/imaxe_e_contedor_4.png)
+![Container imaxe](./../_media/01/imaxe_e_contedor_4.png)
 
 Tal e como podemos ver, este mecanismo é moi útil. Non obstante, esto produce un problema: **a volatilidade dos datos**.
 
@@ -183,22 +183,22 @@ Non obstante, as imaxes pódense evolucionar. Para facelo a clave está, precisa
 
 Partamos dun container que fai cambios no seu sistema de ficheiros.
 
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/crear_container_de_imaxe.png)
+![Container](./../_media/01/crear_container_de_imaxe.png)
 
 Como sabemos, esos cambios quedan reflectidos no súa capa de container.
 
 Se detemos agora o container, de tal xeito que non poida facer máis cambios:
 
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/crear_container_de_imaxe_detido.png)
+![Container](./../_media/01/crear_container_de_imaxe_detido.png)
 
 Nótese que o container está **detido**, non **destruido**, polo tanto o container non está a correr pero está presente no motor de Docker, e polo tanto tamén a súa capa de datos.
 
 Se agora collemos esa capa de datos propia do container e facemos un **commit**, o que estamos a facer e producir unha nova imaxe que sí que incorpora os cambios da capa de container á súa propia estrutura interna.
 
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/crear_container_de_imaxe_detido_commit.png)
+![Container](./../_media/01/crear_container_de_imaxe_detido_commit.png)
 
 En definitiva, **acabamos de evoluciona-la imaxe**. E os novos containers baseados nesa nova imaxe sí verán os cambios que fixeramos no container orixinal.
 
 Este precisamente, é o ciclo de evolución das imaxes en Docker.
 
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/evolucion_da_imaxe.png)
+![Container](./../_media/01/evolucion_da_imaxe.png)

@@ -36,17 +36,17 @@ Polo tanto, a conterización introduce un novo paradigma de diseño de aplicaci�
 - Acadando esta modularidade, as diferentes partes pódense ver como **microservicios** que expoñen una interface clara para comunicarse e que traballan conxuntamente para asegura-lo cumprimento dos obxectivos do sistema como entidade. 
 - Ademáis as nosas aplicación son por fin **escalables horizontalmente**, engandindo novas instancias (containers) podemos aumenta-la potencia da nosa aplicación sen necesidade de recurrir á gaiola do **escalado vertical**.
 
-## O problema do paradigma de orquestración
+# O problema do paradigma de orquestración
 
 Vale, agora temos claro que hai que romper todo en unidades pequenas que se comunican entre sí. Pero, cómo facemos iso?
 
 Imos comenzar conha simple aplicación en Php dentro dun container:
 
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/container_standalonoe.png)
+![Container](./../_media/01/container_standalonoe.png)
 
 A nosa aplicación quere ter **estado**. A solución obvia é agregar unha base de datos dentro do container:
 
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/mega_container.png)
+![Container](./../_media/01/mega_container.png)
 
 Isto, a pesar de qué sería unha solución obvia, é un horror e unha ruptura do paradigma da containerización:
 
@@ -58,17 +58,17 @@ O problema sería peor se queremos, por exemplo, engadir soporte para SSL, un se
 
 A solución axeitada sería esta:
 
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/container_bbdd.png)
+![Container](./../_media/01/container_bbdd.png)
 
 Agora temos dúas unidades independentes en dous containers. Podemos modificar unha sen afecta-la outra. As preocupacións están correctamente separadas. 
 
 Neste momento, os nosos containers poden ademáis **escalar**, basta con engadir novos containers de aplicación se é necesario:
 
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/escalado_container.png)
+![Container](./../_media/01/escalado_container.png)
 
 E, por suposto, podemos engadir os servicios auxiliares que creamos convintes, sen necesidade de modifica-los containers que xa temos (**encapsulación**).
 
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/escalado_funcional.png)
+![Container](./../_media/01/escalado_funcional.png)
 
 Como podemos ver, a nosa aplicación **crece engandindo novas unidades funcionais**, **non modificando as existentes**. Esto aporta as vantaxes das que xa falaramos na sección previa.
 
@@ -83,7 +83,7 @@ Pero, xorden preguntas:
 
 # Kubernetes: O estándar de facto
 
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/kubernetes.jpg)
+![Container](./../_media/01/kubernetes.jpg)
 
 Orixinalmente desenrolado por Google, como unha nova [versión aberta](https://github.com/kubernetes/kubernetes) do seu proxecto Borg ([Borg project](https://kubernetes.io/blog/2015/04/borg-predecessor-to-kubernetes/)) pero enfocada na xestión de contedores Docker, estase a convertir na ferramenta de referencia para a orquestación de contedores. E o proxecto principal sobre o que se creou a [Cloud Native Computing Foundation](https://www.cncf.io/), a cal está respaldada polos principais actores tecnolóxicos actuais tales coma Google, Amazon Web Services (AWS), Microsoft, IBM, Intel, Cisco, e RedHat.
 
@@ -99,4 +99,16 @@ Aínda que actualmente a propia [Docker abandou a carreira](https://blog.newreli
 
 O enxame de Docker se compón dun conxunto de 2 ou máis máquinas (físicas, virtuais, containers docker!) donde o único requisito que precisan e que corra o demonio de Docker (docker engine). Estas máquinas se conectan entre si formando un cluster, de maneira que actuen como un único sistema, agrupando recursos e permitindo despregar un maior número de servicios, escalalos horizontalmente, poñelos en alta dispoñibilidade... E o mellor de todo e que este cluster se monta con 2 sinxelos comandos, e se xestiona mediante o docker cli.
 
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/swarm.png)
+![Container](./../_media/01/swarm.png)
+
+# Apache Mesos e Marathon
+
+![Container](./../_media/01/mesos_marathon.jpg)
+
+[Apache Mesos](http://mesos.apache.org/), lixeiramente anterior a Kubernetes, é un proxecto de software aberto orixinalmente desenrolado pola Universidade de California en Berkeley.
+
+Actualmente o empregan compañías como [Twitter, Uber, e Paypal](https://www.linux.com/news/4-unique-ways-uber-twitter-paypal-and-hubspot-use-apache-mesos), e a súa lixeira interface permiteo escalar facilmente ata os 10,000 nodos (ou máis), e permite o desenrolo de frameworks sobre él que evolucionen de xeito independente.
+
+A súa APIs soporta linguaxes populares coma Java, C++, e Python, e ademáis ofrece alta dispoñibilidade por defecto.
+
+Pero, pola contra a Swarm ou Kubernetes, Mesos sólo provee manexo do cluster de nodos, polo que existen varios frameworks por riba de Mesos, un dos cais é [Marathon](https://mesosphere.github.io/marathon/), unha plataforma a nivel de producción, para a orquestación de contedores.
