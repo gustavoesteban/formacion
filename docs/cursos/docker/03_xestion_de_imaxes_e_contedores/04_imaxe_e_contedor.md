@@ -1,6 +1,6 @@
 # Imaxe e contedor
 
-> Nesta sección afirmamos que a imaxe é algo **estático** e **inmutable**, polo que as imaxes non se poden cambiar, agás a través dos métodos establecidos para o desenvolvemento e mantemento de imaxes por parte da suite de Docker. 
+> Nesta sección afirmamos que a imaxe é algo **estático** e **inmutable**, polo que as imaxes non se poden cambiar, agás a través dos métodos establecidos para o desenvolvemento e mantemento de imaxes por parte da suite de Docker.
 
 - Significa isto que un container non pode escribir en disco? 
 - Dentro do container, poderemos crear, borrar ou modificar ficheiros?
