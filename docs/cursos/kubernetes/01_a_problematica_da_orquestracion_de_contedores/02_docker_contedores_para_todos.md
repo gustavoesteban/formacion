@@ -203,3 +203,20 @@ En definitiva, **acabamos de evoluciona-la imaxe**. E os novos containers basead
 Este precisamente, é o ciclo de evolución das imaxes en Docker.
 
 ![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/evolucion_da_imaxe.png)
+
+# Que é a orquestación de contedores?
+
+> A orquestación de contedores consiste fundamentalmente no manexo do ciclo de vida dos contedores, especialmente en entornos dinámicos onde coexisten múltiples aplicacións e servizos. Os equipos de desenrolo e operacións usan a orquestación de contedores para controlar e automatizar un conxunto de tarefas:
+
+- Aprovisionamento e despregue de contedores.
+- Redundancia e alta dispoñibilidade dos servicios que corren nos contedores.
+- Escalado horizontal e purgado de contedores para repartir a carga equitativamente entre as máquinas que compoñen a infraestructura de aloxamento.
+- Traslado de contedores dende un anfitrión a outro se hai escasez de recursos nun anfitrión, ou un anfitrión se cae.
+- Descubrimento de servizos (service discovery) entre as partes que compoñen a aplicación.
+- Balanceo de carga entre contedores que compoñen un servizo.
+- Monitorización da saude dos contedores e dos anfitrións que corren no cluster.
+- Exposición ao exterior dos servizos que corren dentro dos contedores.
+- Configuración da aplicación en relación ca infraestructura de contedores onde está aloxada.
+
+# O paradigma da conterización
+
