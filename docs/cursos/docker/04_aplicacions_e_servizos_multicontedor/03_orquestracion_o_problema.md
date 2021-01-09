@@ -30,11 +30,11 @@ Vale, agora temos claro que hai que romper todo en unidades pequenas que se comu
 
 Imos comenzar conha simple aplicación en Php dentro dun container:
 
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/container_standalonoe.png)
+![Container](./../_media/04_aplicacions_e_servizos_multicontedor/container_standalonoe.png)
 
 A nosa aplicación quere ter **estado**. A solución obvia é agregar unha base de datos dentro do container:
 
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/mega_container.png)
+![Container](./../_media/04_aplicacions_e_servizos_multicontedor/mega_container.png)
 
 Isto, a pesar de qué sería unha solución obvia, é un horror e unha ruptura do paradigma da containerización:
 
@@ -46,17 +46,17 @@ O problema sería peor se queremos, por exemplo, engadir soporte para SSL, un se
 
 A solución axeitada sería esta:
 
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/container_bbdd.png)
+![Container](./../_media/04_aplicacions_e_servizos_multicontedor/container_bbdd.png)
 
 Agora temos dúas unidades independentes en dous containers. Podemos modificar unha sen afecta-la outra. As preocupacións están correctamente separadas. 
 
 Neste momento, os nosos containers poden ademáis **escalar**, basta con engadir novos containers de aplicación se é necesario:
 
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/escalado_container.png)
+![Container](./../_media/04_aplicacions_e_servizos_multicontedor/escalado_container.png)
 
 E, por suposto, podemos engadir os servicios auxiliares que creamos convintes, sen necesidade de modifica-los containers que xa temos (**encapsulación**).
 
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/escalado_funcional.png)
+![Container](./../_media/04_aplicacions_e_servizos_multicontedor/escalado_funcional.png)
 
 Como podemos ver, a nosa aplicación **crece engandindo novas unidades funcionais**, **non modificando as existentes**. Esto aporta as vantaxes das que xa falaramos na sección previa.
 
@@ -68,13 +68,3 @@ Pero, xorden preguntas:
 - Cómo inxectamos configuracións comúns a tódolos containers?
 
 > A estas e outras moitas preguntas trata de dar resposta **a orquestración de containers**.
-
-# Kubernetes: O estándar de facto
-
-![Container](./../_media/01_a_problematica_da_orquestracion_de_contedores/kubernetes.jpg)
-
-Orixinalmente desenrolado por Google, como unha nova [versión aberta](https://github.com/kubernetes/kubernetes) do seu proxecto Borg ([Borg project](https://kubernetes.io/blog/2015/04/borg-predecessor-to-kubernetes/)) pero enfocada na xestión de contedores Docker, estase a convertir na ferramenta de referencia para a orquestación de contedores. E o proxecto principal sobre o que se creou a [Cloud Native Computing Foundation](https://www.cncf.io/), a cal está respaldada polos principais actores tecnolóxicos actuais tales coma Google, Amazon Web Services (AWS), Microsoft, IBM, Intel, Cisco, e RedHat.
-
-Kubernetes continua a gañar en popularidade gracias tamén a cultura DevOps e os seus adeptos, xa que nos permite dispoñer dunha plataforma-como-servicio (PaaS) na nosa propia infraestructura, que ademais crea unha abstracción da capa de harware para permitir que os desenvolvedores se centren en evolucionar as aplicacións da organización, en vez de configurar máquinas.  Ademáis é extremadamente portable, xa que corre en [Amazon Web Services](https://aws.amazon.com/) (AWS), [Microsoft Azure](https://azure.microsoft.com/en-us/), [Google Cloud Platform](https://cloud.google.com/) (GCP), [DigitalOcean](https://www.digitalocean.com/products/kubernetes/),... e por suposto nunha instalación on-premise da propia organización.
-
-Ademáis nos permite mover cargas de traballo entre diferentes proveedores sen ter que refacer a aplicación ou redefinir a infraestructura, o cal permite ás organizacións estandarizarse nunha plataforma e evitar atarse a un proveedor (vendor lock-in).
