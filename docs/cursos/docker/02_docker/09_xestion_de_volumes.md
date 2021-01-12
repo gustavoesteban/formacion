@@ -45,7 +45,7 @@ Como podemos ver:
 - Indicamoslle ó Docker que queremos un contedor interactivo que se autodestrúa  (_**run --rm -ti**_).
 - Imos corre-la imaxe _**prefapp/debian**_.
 - O comando de entrada é o _**bash**_.
-- Montamos un volume: _**-v**_, indicándolle ruta_anfitrion:ruta_contedor (_**~/meu_contedor:/var/datos)**_.
+- Montamos un volume: _**-v**_, indicándolle ruta_anfitrion:ruta_contedor _**(~/meu_contedor:/var/datos)**_.
 
 # 📖 Actividade 2
 
