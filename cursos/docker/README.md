@@ -2,7 +2,7 @@
 
 # Os contedores de software
 
-Nos últimos catro anos, o mundo dos sysadmin está a asistir a unha revolución sen precedentes.
+Nos últimos catro anos, o mundo da xestión de sistemas informaticos está a asistir a unha revolución sen precedentes.
 - Que pasaría se poidesemos crear máquinas virtuais con coste prácticamente nulo en tempo e computación?
 - Que ocorrería se nunha máquina poidesemos despregar en cuestión de segundos centos ou incluso miles de máquinas virtuais co seu propio SO, sistema de ficheiros, usuarios, árbores de PIDs, stacks de rede...?
 - E se, por enriba, esta tecnoloxía fose compatible con todo o stack actual, puidendo correr en servidores físicos, servidores virtuais, clouds privadas e públicas ou no propio laptop do desenvolverdor?
