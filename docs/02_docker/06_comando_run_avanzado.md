@@ -1,6 +1,6 @@
 # Comando _**run**_ avanzado
 
-Unha vez comprendido o ciclo básico de **crear-correr-deter-borrar** contedores, imos revisita-lo comando run para vez algunhas das súas opcións.
+Unha vez comprendido o ciclo básico de **crear-correr-deter-borrar** contedores, imos revisita-lo comando run para ver algunhas das súas opcións.
 
 ## Executar un comando instantáneo nun contedor
 
