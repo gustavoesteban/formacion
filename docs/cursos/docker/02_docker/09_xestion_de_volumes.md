@@ -37,7 +37,7 @@ Para acadar isto, abonda con indicarlle a Docker qué directorio do noso anfitri
 Nun exemplo:
 
 ```shell
-docker run --rm -ti -v ~/meu:contedor:/var/datos prefapp/debian-formacion bash
+docker run --rm -ti -v ~/meu_contedor:/var/datos prefapp/debian-formacion bash
 ```
 
 Como podemos ver:
