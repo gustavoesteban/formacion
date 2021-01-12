@@ -22,8 +22,6 @@ Así, poderíamos ter un contedor cun apache conectado ó porto 80:
 
 Ou poderíamos ter varios contedores con servizos apache conectados ó porto 80:
 
-Ou poderíamos ter varios contedores con servizos apache conectados ó porto 80:
-
 ![Containers porto](./../_media/02_docker/contedores_porto.png)
 
 Dado que cada un deles ten o seu propio namespace de rede, non habería ningún problema de colisión entre servizos conectados ó mesmo porto en contedores diferentes. 
