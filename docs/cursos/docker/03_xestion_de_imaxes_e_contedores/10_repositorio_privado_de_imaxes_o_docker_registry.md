@@ -34,7 +34,7 @@ Para poder subir unha imaxe ó noso registry privado, primeiro temos que indicar
 
 Para iso, imos empregar [docker-tag](https://docs.docker.com/engine/reference/commandline/tag/). Trátase dunha ferramenta que nos permite producir unha nova imaxe creando unha referencia á outra que se convirte na sua orixe. 
 
-![docker-tag](./../_media/03_xestion_de_imaxes_e_contedores/docker_tag.png)
+![dockertag](./../_media/03_xestion_de_imaxes_e_contedores/docker_tag.png)
 
 Dende o momento de creación da nova imaxe, mediante tag, xa se pode facer referencia á mesma sen afectar á imaxe orixinal. 
 
