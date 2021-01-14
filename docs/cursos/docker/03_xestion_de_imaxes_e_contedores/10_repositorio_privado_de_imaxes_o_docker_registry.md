@@ -34,16 +34,14 @@ Para poder subir unha imaxe ó noso registry privado, primeiro temos que indicar
 
 Para iso, imos empregar [docker-tag](https://docs.docker.com/engine/reference/commandline/tag/). Trátase dunha ferramenta que nos permite producir unha nova imaxe creando unha referencia á outra que se convirte na sua orixe. 
 
-<div class="ic">
-    <img src="./../_media/03_xestion_de_imaxes_e_contedores/docker_tag.png" |>
-</div>
+[docker-tag](./../_media/03_xestion_de_imaxes_e_contedores/docker_tag.png)
 
 Dende o momento de creación da nova imaxe, mediante tag, xa se pode facer referencia á mesma sen afectar á imaxe orixinal. 
 
 Dado que o nome da imaxe está constituido por segmentos alfanuméricos separados por "**/**" e que se pode, opcionalmente, introducir o registry como primer segmento, podemos almacenar a nosa imaxe de prefapp/debian-formacion no registry privado de xeito sinxelo:
 
 ```shell
-docker tar prefapp/debian-formacion localhost:5000/prefapp/debian-formacion
+docker tag prefapp/debian-formacion localhost:5000/prefapp/debian-formacion
 ```
 
 Neste comando estamos a dicir:
