@@ -18,4 +18,4 @@ Todo iso é o que posibilita a nova tecnoloxía dos contedores de software.
 O cambio é dun calado tal que afecta non só as coitas e preocupacións propias dos devops e sysadmins senón tamén á forma de construir e programar as aplicacións e servizos. Estamos ante un novo paradigma que introduce, por fin, na industria unha nova arquitectura: a dos microservicios.
 
 No presente curso imos adentrarnos no novo paradigma dos contedores para darlle ó docente unha visión o máis completa e práctica posible desta nova tecnoloxía e das súas posibilidades. 
-
+foo
