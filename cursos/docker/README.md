@@ -2,6 +2,12 @@
 
 # Os contedores de software
 
+<script id="asciicast-46819" src="https://asciinema.org/a/46819.js" async></script>
+
+<div align="center">
+<script id="asciicast-46819" src="https://asciinema.org/a/46819.js" async></script>
+</div>
+
 Nos últimos catro anos, o mundo dos sysadmin está a asistir a unha revolución sen precedentes.
 - Que pasaría se poidesemos crear máquinas virtuais con coste prácticamente nulo en tempo e computación?
 - Que ocorrería se nunha máquina poidesemos despregar en cuestión de segundos centos ou incluso miles de máquinas virtuais co seu propio SO, sistema de ficheiros, usuarios, árbores de PIDs, stacks de rede...?
